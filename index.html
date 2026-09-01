@@ -2304,7 +2304,7 @@
                 </p>
                 <div class="added-cart-actions">
                     <button class="added-cart-continue-btn" onclick="closeRemoveConfirmModal()">Cancel</button>
-                    <button class="remove-confirm-ok-btn" onclick="confirmRemoveFromCart()">
+                    <button class="remove-confirm-ok-btn" onclick="confirmRemoveFromCart(event)">
                         <i class="fas fa-trash-can"></i> Remove
                     </button>
                 </div>
@@ -2626,15 +2626,48 @@
                 lastFocusedBeforeRemoveConfirm = null;
             }
 
-            function confirmRemoveFromCart() {
+            function confirmRemoveFromCart(e) {
+                // Prevent this click from reaching the document click event
+                if (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+
                 if (!pendingRemoveKey) {
                     closeRemoveConfirmModal();
                     return;
                 }
+
+                // Remove only the selected product
                 delete cart[pendingRemoveKey];
+
+                // Save updated cart
                 localStorage.setItem(APP.CART_STORAGE_KEY, JSON.stringify(cart));
+
+                // Close only the remove confirmation popup
+                const modal = document.getElementById("removeConfirmModal");
+                if (modal) {
+                    modal.classList.remove("show");
+                }
+
+                // Reset variables
+                pendingRemoveKey = null;
+                lastFocusedBeforeRemoveConfirm = null;
+
+                // Update cart items
                 updateCartUI();
-                closeRemoveConfirmModal();
+
+                // Make sure the cart remains open
+                const cartPanel = document.getElementById("cartPanel");
+                const cartBtn = document.querySelector(".cart-icon-btn");
+
+                if (cartPanel) {
+                    cartPanel.classList.remove("hidden");
+                }
+
+                if (cartBtn) {
+                    cartBtn.setAttribute("aria-expanded", "true");
+                }
             }
 
             function clearCart() {
