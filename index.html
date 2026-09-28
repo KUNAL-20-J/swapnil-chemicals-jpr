@@ -1,5 +1,10 @@
 <!doctype html>
 <!-- Home new code 25-09-26 -->
+<!-- Please add the Khatabook PDF to the code so that the Workshop Name and Phone Number are automatically fetched from the PDF. The customer should not have to enter them manually.
+
+Also, add Date and Time Slot selection options to the form
+
+in this code only do not create any other file -->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -9,15 +14,15 @@
         <link rel="apple-touch-icon" href="SC Logo.jpg" />
         <link
             rel="manifest"
-            href='data:application/manifest+json,{"name":"Swapnil Chemicals - Home Cleaning Products","short_name":"Swapnil Chemicals","description":"Manufacturers and marketers of home cleaning products in Jaipur - dashboard polish, tyre polish, car wash, glass cleaner and more.","start_url":".","scope":".","display":"standalone","background_color":"%23f8fafc","theme_color":"%231e293b","lang":"en-IN","icons":[{"src":"SC Logo.jpg","sizes":"any","type":"image/jpeg"}]}'
+            href='data:application/manifest+json,{"name":"Swapnil Chemicals - Home Cleaning Products","short_name":"Swapnil Chemicals","description":"Manufacturers and marketers of home cleaning products in Jaipur - handcare, dishwash, detergent, tiles cleaner, toilet cleaner.","start_url":".","scope":".","display":"standalone","background_color":"%23f8fafc","theme_color":"%231e293b","lang":"en-IN","icons":[{"src":"SC Logo.jpg","sizes":"any","type":"image/jpeg"}]}'
         />
         <meta
             name="description"
-            content="Swapnil Chemicals - Leading manufacturers of home cleaning products in Jaipur. Bulk & retail. Dashboard polish, tyre polish, car wash & more."
+            content="Swapnil Chemicals - Leading manufacturers of home cleaning products in Jaipur. Bulk & retail. handcare, dishwash, detergent, tiles cleaner, toilet cleaner."
         />
         <meta
             name="keywords"
-            content="home cleaning, car cleaning, dashboard polish, tyre polish, car wash, glass cleaner, Jaipur manufacturer"
+            content="handcare, dishwash, detergent, tiles cleaner, toilet cleaner, Jaipur manufacturer"
         />
         <meta name="robots" content="index, follow" />
         <meta name="color-scheme" content="light" />
@@ -33,7 +38,7 @@
         <meta property="og:title" content="Swapnil Chemicals | Home Cleaning Products Manufacturer, Jaipur" />
         <meta
             property="og:description"
-            content="Manufacturers of premium home cleaning products in Jaipur - dashboard polish, tyre polish, car wash, glass cleaner & more. Bulk & retail."
+            content="Manufacturers of premium home cleaning products in Jaipur - handcare, dishwash, detergent, tiles cleaner, toilet cleaner. Bulk & retail."
         />
         <meta property="og:image" content="SC Logo.jpg" />
         <meta property="og:locale" content="en_IN" />
@@ -41,7 +46,7 @@
         <meta name="twitter:title" content="Swapnil Chemicals | Home Cleaning Products Manufacturer, Jaipur" />
         <meta
             name="twitter:description"
-            content="Manufacturers of premium home cleaning products in Jaipur - dashboard polish, tyre polish, car wash, glass cleaner & more."
+            content="Manufacturers of premium home cleaning products in Jaipur - handcare, dishwash, detergent, tiles cleaner, toilet cleaner."
         />
         <meta name="twitter:image" content="SC Logo.jpg" />
 
@@ -850,10 +855,39 @@
                 background: #fff;
             }
 
-            .enquiry-field-wrap:has(#phone-error:not(.hidden)) .enquiry-input,
-            .enquiry-field-wrap:has(#cart-phone-error:not(.hidden)) .enquiry-input {
+            .enquiry-field-wrap:has(.enquiry-error:not(.hidden)) .enquiry-input {
                 border-color: #ef4444;
                 background: #fef2f2;
+            }
+
+            .enquiry-input[readonly] {
+                background: #eef2ff;
+                border-color: #c7d2fe;
+                color: #3730a3;
+                font-weight: 600;
+            }
+
+            .enquiry-row-2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            @media (max-width: 420px) {
+                .enquiry-row-2 {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .workshop-change-btn {
+                background: none;
+                border: none;
+                padding: 0;
+                color: var(--brand-accent-dark);
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-decoration: underline;
+                cursor: pointer;
             }
 
             .enquiry-submit-btn {
@@ -2553,7 +2587,7 @@
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
                 "name": "Swapnil Chemicals",
-                "description": "Manufacturers and marketers of home cleaning products - dashboard polish, tyre polish, car wash, glass cleaner and more.",
+                "description": "Manufacturers and marketers of home cleaning products - handcare, dishwash, detergent, tiles cleaner, toilet cleaner.",
                 "image": "SC Logo.jpg",
                 "telephone": ["+919352470085", "+919024598298"],
                 "email": "swapnilchemicals10@gmail.com",
@@ -2637,7 +2671,7 @@
                         "image": "Handcare.jpg",
                         "description": "Handcare",
                         "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
-                        "offers": { "@type": "Offer", "price": "200", "priceCurrency": "INR", "url": "#products" }
+                        "offers": { "@type": "Offer", "price": "150", "priceCurrency": "INR", "url": "#products" }
                     },
                     {
                         "@type": "Product",
@@ -2645,7 +2679,7 @@
                         "image": "Dishwash.png",
                         "description": "Dishwash",
                         "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
-                        "offers": { "@type": "Offer", "price": "150", "priceCurrency": "INR", "url": "#products" }
+                        "offers": { "@type": "Offer", "price": "70", "priceCurrency": "INR", "url": "#products" }
                     },
                     {
                         "@type": "Product",
@@ -2653,7 +2687,7 @@
                         "image": "Detergent.png",
                         "description": "Detergent",
                         "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
-                        "offers": { "@type": "Offer", "price": "70", "priceCurrency": "INR", "url": "#products" }
+                        "offers": { "@type": "Offer", "price": "130", "priceCurrency": "INR", "url": "#products" }
                     },
                     {
                         "@type": "Product",
@@ -2661,15 +2695,15 @@
                         "image": "Tiles Cleaner.jpg",
                         "description": "Tiles Cleaner",
                         "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
-                        "offers": { "@type": "Offer", "price": "70", "priceCurrency": "INR", "url": "#products" }
+                        "offers": { "@type": "Offer", "price": "100", "priceCurrency": "INR", "url": "#products" }
                     },
                     {
                         "@type": "Product",
                         "name": "Toilet Cleaner",
                         "image": "Toilet Cleaner.png",
-                        "description": "Toilet Cleaner",
+                        "description": "Effective interior cleaner for all surfaces",
                         "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
-                        "offers": { "@type": "Offer", "price": "130", "priceCurrency": "INR", "url": "#products" }
+                        "offers": { "@type": "Offer", "price": "70", "priceCurrency": "INR", "url": "#products" }
                     }
                 ]
             }
@@ -2955,7 +2989,7 @@
                                 type="search"
                                 id="productSearch"
                                 class="w-full pl-11 pr-12 py-3 rounded-xl border border-gray-200 bg-white focus:border-blue-500 focus:outline-none focus:shadow-[0_0_0_4px_rgba(139,92,246,0.15)] transition-shadow text-sm"
-                                placeholder="Search products (e.g. handcare, dishwash)..."
+                                placeholder="Search products (e.g. tyre polish, micro towel)..."
                                 aria-label="Search products"
                             />
                             <button type="button" id="voiceSearchBtn" class="voice-btn" aria-label="Search by voice">
@@ -3345,37 +3379,19 @@
                         ></div>
                         <input type="hidden" id="enquiry-qty-value" />
                     </div>
+                    <!-- Workshop, phone, date and time slot fields are rendered by customerFieldsHtml() -->
+                    <div id="enquiry-customer-fields"></div>
                     <div class="enquiry-field-wrap mb-4">
                         <label class="block text-sm font-semibold text-gray-700 mb-1" for="enquiry-details"
-                            >Name &amp; Address</label
+                            >Address &amp; Requirements</label
                         >
                         <textarea
                             id="enquiry-details"
                             class="enquiry-textarea"
                             rows="2"
                             maxlength="300"
-                            placeholder="Any specific requirements..."
+                            placeholder="Delivery address, any specific requirements..."
                         ></textarea>
-                    </div>
-                    <div class="enquiry-field-wrap mb-4">
-                        <label class="block text-sm font-semibold text-gray-700 mb-1" for="enquiry-phone"
-                            >Phone Number <span class="text-red-500">*</span></label
-                        >
-                        <div class="enquiry-phone-group">
-                            <input
-                                type="tel"
-                                id="enquiry-phone"
-                                class="enquiry-input"
-                                maxlength="10"
-                                inputmode="numeric"
-                                autocomplete="tel-national"
-                                placeholder="10-digit mobile number"
-                                aria-describedby="phone-error"
-                            />
-                        </div>
-                        <p id="phone-error" class="enquiry-error text-red-500 text-xs mt-1 hidden" role="alert">
-                            Enter a valid 10-digit mobile number
-                        </p>
                     </div>
                     <button class="enquiry-submit-btn" data-action="submit-enquiry">
                         <i class="fab fa-whatsapp" aria-hidden="true"></i> Send Enquiry via WhatsApp
@@ -3463,8 +3479,19 @@
             const APP = Object.freeze({
                 WA_NUMBER: "919352470085",
                 CART_STORAGE_KEY: "sc_cart_home",
+                // This device's last-used WhatsApp number & workshop, so the next enquiry fills itself in.
+                // CUSTOMER_STORAGE_KEY: "sc_customer",
                 CURRENCY: "INR",
                 COUNTRY_CODE: "+91",
+                // Phone-number lookup against the Khatabook list embedded (server-side) at the top of this file.
+                WORKSHOP_LOOKUP_URL: window.location.pathname,
+                BOOKING_DAYS_AHEAD: 30,
+                // A slot can be booked for today only until its start hour.
+                TIME_SLOTS: Object.freeze([
+                    { startHour: 10, label: "10:00 AM – 12:00 PM" },
+                    { startHour: 12, label: "12:00 PM – 2:00 PM" },
+                    { startHour: 14, label: "2:00 PM – 4:00 PM" },
+                ]),
             });
 
             function isValidIndianMobile(value) {
@@ -3540,6 +3567,8 @@
                     price: 150,
                     unit: "Lt",
                     hasLtOptions: true,
+                    qtyOptions: [5, 10, 35, 50],
+                    qtyLabel: "Lt",
                     description: "Handcare",
                 },
                 {
@@ -3549,6 +3578,8 @@
                     price: 70,
                     unit: "Lt",
                     hasLtOptions: true,
+                    qtyOptions: [5, 10, 35, 50],
+                    qtyLabel: "Lt",
                     description: "Dishwash",
                 },
                 {
@@ -3558,6 +3589,8 @@
                     price: 130,
                     unit: "Lt",
                     hasLtOptions: true,
+                    qtyOptions: [5, 10, 35, 50],
+                    qtyLabel: "Lt",
                     description: "Detergent",
                 },
                 {
@@ -3567,19 +3600,24 @@
                     price: 100,
                     unit: "Lt",
                     hasLtOptions: true,
+                    qtyOptions: [5, 10, 35, 50],
+                    qtyLabel: "Lt",
                     description: "Tiles Cleaner",
                 },
                 {
                     id: 5,
                     name: "Toilet Cleaner",
                     image: "Toilet Cleaner.png",
-                    price: 130,
+                    price: 70,
                     unit: "Lt",
                     hasLtOptions: true,
+                    qtyOptions: [5, 10, 35, 50],
+                    qtyLabel: "Lt",
                     description: "Toilet Cleaner",
                 },
             ];
 
+            // const LT_OPTIONS = [5, 10, 35, 50];
             const LT_OPTIONS = [10, 35, 50];
             let cart = {};
             let lastCartBadgeCount = 0;
@@ -3987,22 +4025,17 @@
               ${itemsHtml}
               <div class="flex justify-between items-center pt-3 font-bold text-gray-800"><span>Grand Total</span><span class="text-blue-600">${formatCurrency(grandTotal)}</span></div>
           </div>
+          ${customerFieldsHtml("cart-enquiry")}
           <div class="enquiry-field-wrap mb-4">
-              <label class="block text-sm font-semibold text-gray-700 mb-1" for="cart-enquiry-details">Name &amp; Address</label>
-              <textarea id="cart-enquiry-details" class="enquiry-textarea" rows="2" maxlength="300" placeholder="name, address, any specific requirements..."></textarea>
-          </div>
-          <div class="enquiry-field-wrap mb-4">
-              <label class="block text-sm font-semibold text-gray-700 mb-1" for="cart-enquiry-phone">Phone Number <span class="text-red-500">*</span></label>
-              <div class="enquiry-phone-group">
-                  <input type="tel" id="cart-enquiry-phone" class="enquiry-input" maxlength="10" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number" aria-describedby="cart-phone-error">
-              </div>
-              <p id="cart-phone-error" class="enquiry-error text-red-500 text-xs mt-1 hidden" role="alert">Enter a valid 10-digit mobile number</p>
+              <label class="block text-sm font-semibold text-gray-700 mb-1" for="cart-enquiry-details">Address &amp; Requirements</label>
+              <textarea id="cart-enquiry-details" class="enquiry-textarea" rows="2" maxlength="300" placeholder="Delivery address, any specific requirements..."></textarea>
           </div>
           <button class="enquiry-submit-btn" data-action="submit-cart-enquiry">
               <i class="fab fa-whatsapp" aria-hidden="true"></i> Send Enquiry via WhatsApp
           </button>
           <p class="text-center text-xs text-gray-400 mt-3">Your enquiry will be sent directly to <b>Swapnil Chemicals</b> on WhatsApp</p>
       `;
+                initCustomerFields("cart-enquiry");
                 const totalItems = keys.reduce((s, k) => s + cart[k].qty, 0);
                 setEnquiryHeader(
                     "Cart Enquiry",
@@ -4020,15 +4053,9 @@
             }
 
             function submitCartEnquiry() {
-                const phoneEl = document.getElementById("cart-enquiry-phone");
+                const customer = readCustomerFields("cart-enquiry");
+                if (!customer) return;
                 const detailsEl = document.getElementById("cart-enquiry-details");
-                const phoneErrorEl = document.getElementById("cart-phone-error");
-                const phone = phoneEl ? phoneEl.value.trim() : "";
-                if (!isValidIndianMobile(phone)) {
-                    showPhoneError(phoneErrorEl, phoneEl);
-                    return;
-                }
-                if (phoneErrorEl) phoneErrorEl.classList.add("hidden");
                 const details = detailsEl ? detailsEl.value.trim() : "";
                 let grandTotal = 0;
                 const lines = [`🛒 *Cart Enquiry — Swapnil Chemicals*`, ``];
@@ -4043,9 +4070,9 @@
                         `📦 ${product.name} - Qty: ${qty} ${label}, Price: ${formatCurrency(product.price)} = Total: ${formatCurrency(lineTotal)}`
                     );
                 });
-                lines.push(``);
+                lines.push(``, ...customerMessageLines(customer));
                 if (details) lines.push(`📝 Details: ${details}`);
-                lines.push(`📱 Phone: ${APP.COUNTRY_CODE} ${phone}`, `💰 Grand Total: ${formatCurrency(grandTotal)}`);
+                lines.push(`💰 Grand Total: ${formatCurrency(grandTotal)}`);
                 safeOpenNewTab(buildWhatsAppUrl(lines.join("\n")));
                 closeEnquiryModal();
             }
@@ -4258,7 +4285,257 @@
             // markup to restore it the next time a product enquiry is opened.
             const ENQUIRY_BODY_TEMPLATE = document.querySelector(".enquiry-body")?.innerHTML ?? "";
 
-            function showPhoneError(errorEl, inputEl) {
+            // ---------- Customer details: Khatabook workshop lookup, date & time slot ----------
+            function toLocalISODate(date) {
+                const pad = (n) => String(n).padStart(2, "0");
+                return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+            }
+
+            function formatDisplayDate(isoDate) {
+                return new Date(`${isoDate}T00:00:00`).toLocaleDateString("en-IN", {
+                    weekday: "short",
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                });
+            }
+
+            function availableSlots(isoDate) {
+                const now = new Date();
+                if (isoDate !== toLocalISODate(now)) return APP.TIME_SLOTS;
+                return APP.TIME_SLOTS.filter((slot) => slot.startHour > now.getHours());
+            }
+
+            function bookingDateRange() {
+                const first = new Date();
+                if (!availableSlots(toLocalISODate(first)).length) first.setDate(first.getDate() + 1);
+                const last = new Date(first);
+                last.setDate(last.getDate() + APP.BOOKING_DAYS_AHEAD);
+                return { min: toLocalISODate(first), max: toLocalISODate(last) };
+            }
+
+            async function fetchWorkshops(params, signal) {
+                try {
+                    const res = await fetch(`${APP.WORKSHOP_LOOKUP_URL}?${new URLSearchParams({ workshop_lookup: "1", ...params })}`, {
+                        headers: { Accept: "application/json" },
+                        signal,
+                    });
+                    if (!res.ok) return null;
+                    const data = await res.json();
+                    return Array.isArray(data.results) ? data.results : null;
+                } catch {
+                    // Offline or no PHP backend (e.g. Live Server) - the fields still work as plain manual inputs.
+                    return null;
+                }
+            }
+
+            function loadSavedCustomer() {
+                try {
+                    const saved = safeParseJSON(localStorage.getItem(APP.CUSTOMER_STORAGE_KEY), {});
+                    return {
+                        phone: isValidIndianMobile(saved.phone) ? String(saved.phone) : "",
+                        workshop: typeof saved.workshop === "string" ? saved.workshop.slice(0, 120) : "",
+                    };
+                } catch {
+                    return { phone: "", workshop: "" };
+                }
+            }
+
+            function saveCustomer(phone, workshop) {
+                try {
+                    localStorage.setItem(APP.CUSTOMER_STORAGE_KEY, JSON.stringify({ phone, workshop }));
+                } catch {
+                    // Storage blocked (private mode) - the form still works, it just won't prefill next time.
+                }
+            }
+
+            function customerFieldsHtml(p) {
+                const { min, max } = bookingDateRange();
+                return `
+          <div class="enquiry-field-wrap mb-4">
+              <label class="block text-sm font-semibold text-gray-700 mb-1" for="${p}-phone">WhatsApp Number <span class="text-red-500">*</span></label>
+              <div class="enquiry-phone-group">
+                  <input type="tel" id="${p}-phone" class="enquiry-input" maxlength="10" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number" aria-describedby="${p}-phone-error ${p}-customer-hint">
+              </div>
+              <p id="${p}-phone-error" class="enquiry-error text-red-500 text-xs mt-1 hidden" role="alert">Enter a valid 10-digit mobile number</p>
+              <p id="${p}-customer-hint" class="text-xs text-gray-500 mt-1" aria-live="polite">Registered with us? Your workshop name fills in automatically.</p>
+          </div>
+          <div class="enquiry-field-wrap mb-4">
+              <div class="flex justify-between items-center mb-1">
+                  <label class="block text-sm font-semibold text-gray-700" for="${p}-workshop">Workshop Name</label>
+                  <button type="button" id="${p}-workshop-edit" class="workshop-change-btn hidden">Edit</button>
+              </div>
+              <input type="text" id="${p}-workshop" class="enquiry-input" maxlength="120" autocomplete="organization" placeholder="Fills in from your WhatsApp number">
+              <select id="${p}-workshop-choice" class="enquiry-input mt-2 hidden" aria-label="Choose your workshop"></select>
+          </div>
+          <div class="enquiry-row-2 mb-4">
+              <div class="enquiry-field-wrap">
+                  <label class="block text-sm font-semibold text-gray-700 mb-1" for="${p}-date">Preferred Date <span class="text-red-500">*</span></label>
+                  <input type="date" id="${p}-date" class="enquiry-input" min="${min}" max="${max}" value="${min}" required aria-describedby="${p}-date-error">
+                  <p id="${p}-date-error" class="enquiry-error text-red-500 text-xs mt-1 hidden" role="alert">Pick a date from ${formatDisplayDate(min)} to ${formatDisplayDate(max)}</p>
+              </div>
+              <div class="enquiry-field-wrap">
+                  <label class="block text-sm font-semibold text-gray-700 mb-1" for="${p}-slot">Time Slot <span class="text-red-500">*</span></label>
+                  <select id="${p}-slot" class="enquiry-input" required aria-describedby="${p}-slot-error"></select>
+                  <p id="${p}-slot-error" class="enquiry-error text-red-500 text-xs mt-1 hidden" role="alert">Choose an available time slot</p>
+              </div>
+          </div>`;
+            }
+
+            function initCustomerFields(p) {
+                const phoneEl = document.getElementById(`${p}-phone`);
+                const hintEl = document.getElementById(`${p}-customer-hint`);
+                const workshopEl = document.getElementById(`${p}-workshop`);
+                const choiceEl = document.getElementById(`${p}-workshop-choice`);
+                const editBtn = document.getElementById(`${p}-workshop-edit`);
+                const dateEl = document.getElementById(`${p}-date`);
+                const slotEl = document.getElementById(`${p}-slot`);
+                if (!phoneEl || !hintEl || !workshopEl || !choiceEl || !editBtn || !dateEl || !slotEl) return;
+
+                const fillSlots = () => {
+                    const previous = slotEl.value;
+                    const slots = availableSlots(dateEl.value);
+                    slotEl.replaceChildren(
+                        new Option(slots.length ? "Select a slot" : "No slots left", ""),
+                        ...slots.map((slot) => new Option(slot.label, slot.label))
+                    );
+                    if (slots.some((slot) => slot.label === previous)) slotEl.value = previous;
+                };
+                dateEl.addEventListener("change", () => {
+                    fillSlots();
+                    document.getElementById(`${p}-date-error`)?.classList.add("hidden");
+                });
+                slotEl.addEventListener("change", () => document.getElementById(`${p}-slot-error`)?.classList.add("hidden"));
+                fillSlots();
+
+                const defaultHint = hintEl.textContent;
+                const phoneDigits = () => phoneEl.value.replace(/\D/g, "").slice(0, 10);
+                let lookupId = 0;
+
+                const setWorkshop = (name, fromRecords) => {
+                    workshopEl.value = name;
+                    workshopEl.readOnly = fromRecords;
+                    workshopEl.dataset.source = fromRecords ? "khatabook" : "";
+                    editBtn.classList.toggle("hidden", !fromRecords);
+                };
+
+                const hideChoices = () => {
+                    choiceEl.replaceChildren();
+                    choiceEl.classList.add("hidden");
+                };
+
+                const lookup = async (digits) => {
+                    const id = ++lookupId;
+                    hintEl.textContent = "Checking our customer records…";
+                    const results = await fetchWorkshops({ phone: digits });
+                    // Ignore stale answers if the number changed while we were waiting.
+                    if (id !== lookupId || phoneDigits() !== digits) return;
+                    hideChoices();
+                    if (results === null) {
+                        hintEl.textContent = "Couldn't check our customer records right now - please type your workshop name below.";
+                        return;
+                    }
+                    const names = results.map((r) => r.name).filter(Boolean);
+                    if (!names.length) {
+                        if (workshopEl.dataset.source === "khatabook") setWorkshop("", false);
+                        hintEl.textContent = "This number isn't in our records - please type your workshop name below.";
+                        return;
+                    }
+                    setWorkshop(names[0], true);
+                    if (names.length > 1) {
+                        choiceEl.replaceChildren(...names.map((name) => new Option(name, name)));
+                        choiceEl.classList.remove("hidden");
+                        hintEl.textContent = "This number has more than one workshop with us - pick yours below.";
+                    } else {
+                        hintEl.textContent = "Workshop name filled in from our customer records.";
+                    }
+                };
+
+                phoneEl.addEventListener("input", () => {
+                    const digits = phoneDigits();
+                    if (isValidIndianMobile(digits)) {
+                        lookup(digits);
+                        return;
+                    }
+                    lookupId++;
+                    hideChoices();
+                    if (workshopEl.dataset.source === "khatabook") setWorkshop("", false);
+                    hintEl.textContent = defaultHint;
+                });
+
+                choiceEl.addEventListener("change", () => {
+                    workshopEl.value = choiceEl.value;
+                });
+
+                editBtn.addEventListener("click", () => {
+                    hideChoices();
+                    setWorkshop(workshopEl.value, false);
+                    hintEl.textContent = "You can now edit the workshop name.";
+                    workshopEl.focus();
+                });
+
+                // Returning customer on this device: fill both fields straight away,
+                // then re-check the number against the latest Khatabook list.
+                const saved = loadSavedCustomer();
+                if (saved.phone) {
+                    phoneEl.value = saved.phone;
+                    setWorkshop(saved.workshop, false);
+                    lookup(saved.phone);
+                }
+            }
+
+            function readCustomerFields(p) {
+                const phoneEl = document.getElementById(`${p}-phone`);
+                const workshopEl = document.getElementById(`${p}-workshop`);
+                const dateEl = document.getElementById(`${p}-date`);
+                const slotEl = document.getElementById(`${p}-slot`);
+                if (!phoneEl || !workshopEl || !dateEl || !slotEl) return null;
+
+                const phone = phoneEl.value.trim();
+                if (!isValidIndianMobile(phone)) {
+                    showFieldError(document.getElementById(`${p}-phone-error`), phoneEl);
+                    return null;
+                }
+
+                const date = dateEl.value;
+                if (!date || date < dateEl.min || date > dateEl.max) {
+                    showFieldError(document.getElementById(`${p}-date-error`), dateEl);
+                    return null;
+                }
+
+                const slot = slotEl.value;
+                if (!slot || !availableSlots(date).some((s) => s.label === slot)) {
+                    // The chosen slot may have passed while the form was open - refresh the list.
+                    dateEl.dispatchEvent(new Event("change"));
+                    showFieldError(document.getElementById(`${p}-slot-error`), slotEl);
+                    return null;
+                }
+
+                const workshop = workshopEl.value.trim();
+                saveCustomer(phone, workshop);
+                return {
+                    workshop,
+                    phone,
+                    registered: workshopEl.dataset.source === "khatabook",
+                    date,
+                    slot,
+                };
+            }
+
+            function customerMessageLines(customer) {
+                const lines = [];
+                if (customer.workshop) {
+                    lines.push(`🏪 *Workshop:* ${customer.workshop}${customer.registered ? " ✅ (Khatabook customer)" : ""}`);
+                }
+                lines.push(
+                    `📱 *WhatsApp:* ${APP.COUNTRY_CODE} ${customer.phone}`,
+                    `📅 *Preferred Date:* ${formatDisplayDate(customer.date)}`,
+                    `⏰ *Time Slot:* ${customer.slot}`
+                );
+                return lines;
+            }
+
+            function showFieldError(errorEl, inputEl) {
                 if (errorEl) {
                     errorEl.classList.add("hidden");
                     void errorEl.offsetWidth;
@@ -4337,11 +4614,12 @@
                 }
 
                 const details = document.getElementById("enquiry-details");
-                const phone = document.getElementById("enquiry-phone");
-                const phoneError = document.getElementById("phone-error");
                 if (details) details.value = "";
-                if (phone) phone.value = "";
-                if (phoneError) phoneError.classList.add("hidden");
+                const customerFields = document.getElementById("enquiry-customer-fields");
+                if (customerFields) {
+                    customerFields.innerHTML = customerFieldsHtml("enquiry");
+                    initCustomerFields("enquiry");
+                }
 
                 const modal = document.getElementById("enquiryModal");
                 if (modal) {
@@ -4371,16 +4649,9 @@
             }
 
             function submitEnquiry() {
-                const phoneEl = document.getElementById("enquiry-phone");
-                const phoneError = document.getElementById("phone-error");
-                if (!phoneEl || !phoneError || !currentEnquiryProduct) return;
-
-                const phone = phoneEl.value.trim();
-                if (!isValidIndianMobile(phone)) {
-                    showPhoneError(phoneError, phoneEl);
-                    return;
-                }
-                phoneError.classList.add("hidden");
+                if (!currentEnquiryProduct) return;
+                const customer = readCustomerFields("enquiry");
+                if (!customer) return;
 
                 const qtyEl = document.getElementById("enquiry-qty-value");
                 const detailsEl = document.getElementById("enquiry-details");
@@ -4391,7 +4662,7 @@
                     `🛒 *Enquiry — Swapnil Chemicals*`,
                     `📦 *Product:* ${product.name}`,
                     `📏 *Qty:* ${qty}`,
-                    `📱 *Phone:* ${APP.COUNTRY_CODE} ${phone}`,
+                    ...customerMessageLines(customer),
                 ];
                 if (details) lines.push(`📝 *Details:* ${details}`);
                 lines.push(`_Sent from website_`);
