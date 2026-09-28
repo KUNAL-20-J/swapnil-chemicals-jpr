@@ -4362,7 +4362,7 @@ in this code only do not create any other file -->
           </div>
           <div class="enquiry-field-wrap mb-4">
               <div class="flex justify-between items-center mb-1">
-                  <label class="block text-sm font-semibold text-gray-700" for="${p}-workshop">Workshop Name</label>
+                  <label class="block text-sm font-semibold text-gray-700" for="${p}-workshop">Name</label>
                   <button type="button" id="${p}-workshop-edit" class="workshop-change-btn hidden">Edit</button>
               </div>
               <input type="text" id="${p}-workshop" class="enquiry-input" maxlength="120" autocomplete="organization" placeholder="Fills in from your WhatsApp number">
@@ -4432,7 +4432,7 @@ in this code only do not create any other file -->
                     if (id !== lookupId || phoneDigits() !== digits) return;
                     hideChoices();
                     if (results === null) {
-                        hintEl.textContent = "Couldn't check our customer records right now - please type your workshop name below.";
+                        hintEl.textContent = "Couldn't check our customer records right now - please type your name below.";
                         return;
                     }
                     const names = results.map((r) => r.name).filter(Boolean);
