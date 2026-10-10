@@ -5637,7 +5637,7 @@
                         choiceEl.classList.remove("hidden");
                         hintEl.textContent = "This number has more than one workshop with us - pick yours below.";
                     } else {
-                        hintEl.textContent = "Workshop name filled in from our customer records.";
+                        hintEl.textContent = "Name filled in from our customer records.";
                     }
                 };
 
@@ -5716,7 +5716,7 @@
                 const lines = [];
                 if (customer.workshop) {
                     lines.push(
-                        `🏪 *Workshop:* ${customer.workshop}${customer.registered ? " ✅ (Khatabook customer)" : ""}`
+                        `🏪 *Name:* ${customer.workshop}${customer.registered ? " ✅ (Khatabook customer)" : ""}`
                     );
                 }
                 lines.push(
