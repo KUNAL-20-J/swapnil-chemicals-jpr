@@ -1,4 +1,4 @@
-<?php /*><!-- Keeps this PHP block hidden if the page is ever opened without PHP (file://, static host). */
+    <?php /*><!-- Keeps this PHP block hidden if the page is ever opened without PHP (file://, static host). */
 /*
  * Cart PDF -> WhatsApp (Meta WhatsApp Business Cloud API).
  * When a customer downloads the cart PDF, the page POSTs the same PDF here and it is sent
@@ -118,12 +118,12 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
 }
 /* --><? */ ?>
 <!doctype html>
-<!-- Home 10-10-26-->
+<!-- Home 16-10-26-->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Swapnil Chemicals | Home Cleaning Products Manufacturer, Jaipur</title>
+        <title>Swapnil Chemicals | Homes Cleaning Products Manufacturer, Jaipur</title>
         <link rel="icon" type="image/jpeg" href="SC Logo.webp" />
         <link rel="apple-touch-icon" href="SC Logo.webp" />
         <link
@@ -2939,48 +2939,50 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             }
 
             /* ================================================================
-               Diwali theme: maroon night sky, gold & saffron, diyas, toran,
-               rangoli, kandils and canvas fireworks. Layered on top of
-               everything above, so deleting this block restores the old look.
+               Diwali theme: night sky with fireworks, saffron & gold, Lakshmi ji,
+               Ganesh ji & Saraswati ji with aarti, fairy lights, diyas, marigold
+               toran and rangoli motifs. Layered on top of everything above, so
+               deleting this block restores the old look.
                ================================================================ */
             :root {
                 --page-bg: #fff7ed;
-                --violet-deep: #2a0612;
-                --violet: #b91c1c;
-                --violet-bright: #d97706;
-                --indigo: #be123c;
+                --violet-deep: #3b0a0a;
+                --violet: #c2410c;
+                --violet-bright: #ea580c;
+                --indigo: #b91c1c;
                 --cyan: #fbbf24;
-                --brand-accent: #d97706;
-                --brand-accent-dark: #b45309;
-                --brand-cta: #e11d48;
-                --brand-cta-dark: #be123c;
+                --brand-accent: #ea580c;
+                --brand-accent-dark: #c2410c;
+                --brand-cta: #dc2626;
+                --brand-cta-dark: #b91c1c;
+                --diwali-saffron: #f97316;
                 --diwali-gold: #fbbf24;
-                --diwali-gold-deep: #b45309;
+                --diwali-vermilion: #dc2626;
                 --diwali-maroon: #7f1d1d;
                 --font-festive: "Yatra One", var(--font-display);
-                --glow-violet: 0 0 0 1px rgba(217, 119, 6, 0.28), 0 24px 50px -16px rgba(180, 83, 9, 0.45);
+                --glow-violet: 0 0 0 1px rgba(234, 88, 12, 0.28), 0 24px 50px -16px rgba(194, 65, 12, 0.45);
             }
 
             ::selection {
-                background: var(--diwali-gold-deep);
+                background: var(--diwali-saffron);
             }
 
             ::-webkit-scrollbar-thumb {
-                background: linear-gradient(180deg, #f59e0b, #e11d48);
+                background: linear-gradient(180deg, #fbbf24, #f97316 50%, #dc2626);
             }
 
             html {
-                scrollbar-color: #d97706 #fde68a;
+                scrollbar-color: #ea580c #fed7aa;
             }
 
             :is(button, a, input, textarea, select, summary):focus-visible {
-                outline-color: #b45309;
+                outline-color: #c2410c;
             }
 
             body::before {
-                background: radial-gradient(40vw 40vw at 0% 30%, rgba(251, 191, 36, 0.12), transparent 70%),
-                    radial-gradient(35vw 35vw at 100% 60%, rgba(225, 29, 72, 0.08), transparent 70%),
-                    radial-gradient(30vw 30vw at 50% 100%, rgba(234, 88, 12, 0.08), transparent 70%);
+                background: radial-gradient(40vw 40vw at 0% 30%, rgba(249, 115, 22, 0.12), transparent 70%),
+                    radial-gradient(35vw 35vw at 100% 60%, rgba(220, 38, 38, 0.08), transparent 70%),
+                    radial-gradient(30vw 30vw at 50% 100%, rgba(251, 191, 36, 0.1), transparent 70%);
             }
 
             .text-blue-600 {
@@ -2988,7 +2990,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             }
 
             .ring-blue-500\/20 {
-                --tw-ring-color: rgba(251, 191, 36, 0.6);
+                --tw-ring-color: rgba(249, 115, 22, 0.6);
             }
 
             /* ---------- Greeting ribbon ---------- */
@@ -3000,7 +3002,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 font-size: 0.85rem;
                 font-weight: 600;
                 color: #fff7ed;
-                background: linear-gradient(90deg, #7f1d1d, #be123c 30%, #d97706 50%, #be123c 70%, #7f1d1d);
+                background: linear-gradient(90deg, #7f1d1d, #dc2626 25%, #f97316 50%, #dc2626 75%, #7f1d1d);
                 background-size: 200% 100%;
                 animation: gradient-pan 10s linear infinite;
             }
@@ -3012,7 +3014,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 color: #fde68a;
             }
 
-            /* ---------- Toran (marigold garland) hanging under the header ---------- */
+            /* ---------- Toran (marigold & mango-leaf garland) under the header ---------- */
             .diwali-toran {
                 position: absolute;
                 left: 0;
@@ -3023,31 +3025,31 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 background:
                     radial-gradient(circle at 9px 8px, #fde047 0 3px, #f59e0b 3.5px 7px, transparent 7.5px) 0 0 / 36px 16px repeat-x,
                     radial-gradient(circle at 9px 8px, #fb923c 0 3px, #ea580c 3.5px 7px, transparent 7.5px) 18px 0 / 36px 16px repeat-x,
-                    radial-gradient(ellipse 5px 10px at 36px 20px, #15803d 0 85%, transparent 100%) 0 0 / 72px 30px repeat-x,
-                    radial-gradient(circle at 36px 27px, #e11d48 0 3px, transparent 3.5px) 0 0 / 72px 30px repeat-x;
+                    radial-gradient(ellipse 5px 11px at 36px 20px, #15803d 0 85%, transparent 100%) 0 0 / 72px 30px repeat-x,
+                    radial-gradient(circle at 36px 28px, #dc2626 0 2.5px, transparent 3px) 0 0 / 72px 30px repeat-x;
                 filter: drop-shadow(0 3px 3px rgba(127, 29, 29, 0.25));
             }
 
             .nav-blur {
-                border-bottom: 2px solid #fbbf24;
-                background: rgba(255, 251, 235, 0.97);
+                border-bottom: 2px solid #f97316;
+                background: rgba(255, 247, 237, 0.97);
             }
 
             .nav-blur.scrolled {
-                background: rgba(255, 251, 235, 0.99);
+                background: rgba(255, 247, 237, 0.99);
             }
 
             /* ---------- Gradient text & headings ---------- */
             .gradient-text {
-                background: linear-gradient(120deg, #7f1d1d, #be123c 30%, #ea580c 60%, #d97706);
+                background: linear-gradient(120deg, #7f1d1d, #dc2626 30%, #ea580c 60%, #d97706);
                 -webkit-background-clip: text;
                 background-clip: text;
             }
 
             .section-eyebrow {
                 color: #9a3412;
-                background: rgba(251, 191, 36, 0.16);
-                border-color: rgba(217, 119, 6, 0.35);
+                background: rgba(249, 115, 22, 0.14);
+                border-color: rgba(234, 88, 12, 0.35);
             }
 
             .section-eyebrow::before {
@@ -3061,15 +3063,15 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             }
 
             .section-divider.max-w-xs {
-                background: linear-gradient(90deg, #e11d48, #f59e0b, #fde047, #f59e0b, #e11d48);
+                background: linear-gradient(90deg, #dc2626, #f97316, #fde047, #f97316, #dc2626);
             }
 
             /* ---------- Hero: Diwali night sky ---------- */
             .hero-gradient {
-                background: radial-gradient(900px 420px at 50% 115%, rgba(251, 146, 60, 0.55), transparent 65%),
-                    radial-gradient(700px 500px at 10% -10%, rgba(190, 18, 60, 0.45), transparent 60%),
-                    radial-gradient(700px 500px at 95% 5%, rgba(124, 58, 237, 0.35), transparent 60%),
-                    linear-gradient(180deg, #0b0420 0%, #1a0630 45%, #3b0a24 80%, #5b1414 100%);
+                background: radial-gradient(1000px 380px at 50% 115%, rgba(251, 191, 36, 0.55), transparent 65%),
+                    radial-gradient(520px 420px at 88% 100%, rgba(236, 72, 153, 0.35), transparent 70%),
+                    radial-gradient(700px 500px at 5% -10%, rgba(91, 33, 182, 0.45), transparent 60%),
+                    linear-gradient(180deg, #0b0820 0%, #1e1145 32%, #3b1255 58%, #6b1d3a 84%, #9a3412 100%);
             }
 
             .hero-grid {
@@ -3077,27 +3079,27 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             }
 
             .orb-1 {
-                --orb-color: rgba(225, 29, 72, 0.55);
+                --orb-color: rgba(220, 38, 38, 0.5);
             }
 
             .orb-2 {
-                --orb-color: rgba(251, 191, 36, 0.45);
+                --orb-color: rgba(251, 191, 36, 0.4);
             }
 
             .orb-3 {
                 --orb-color: rgba(249, 115, 22, 0.7);
             }
 
-            /* Rising "bubbles" become golden embers */
+            /* Rising "bubbles" become fire embers */
             .bubble {
                 width: calc(var(--s) * 0.25);
                 height: calc(var(--s) * 0.25);
                 border: none;
-                background: radial-gradient(circle, #fff 0 20%, #fde047 40%, rgba(251, 146, 60, 0) 70%);
-                box-shadow: 0 0 10px 2px rgba(251, 191, 36, 0.55);
+                background: radial-gradient(circle, #fff 0 15%, #fde047 35%, #f97316 55%, rgba(220, 38, 38, 0) 72%);
+                box-shadow: 0 0 10px 2px rgba(249, 115, 22, 0.55);
             }
 
-            .diwali-fireworks {
+            .diwali-sky {
                 position: absolute;
                 inset: 0;
                 z-index: 2;
@@ -3120,45 +3122,59 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 font-family: var(--font-festive);
                 font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.75rem);
                 line-height: 1.2;
-                background: linear-gradient(90deg, #fde68a, #fbbf24, #fb923c, #fbbf24, #fde68a);
+                background: linear-gradient(90deg, #fde68a, #fbbf24, #f97316, #fbbf24, #fde68a);
                 background-size: 200% 100%;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 animation: gradient-pan 6s linear infinite;
-                text-shadow: 0 0 30px rgba(251, 191, 36, 0.35);
+                text-shadow: 0 0 30px rgba(249, 115, 22, 0.35);
+            }
+
+            .diwali-tagline {
+                margin-top: 0.35rem;
+                font-size: 0.95rem;
+                font-weight: 500;
+                letter-spacing: 0.04em;
+                color: rgba(254, 215, 170, 0.85);
+            }
+
+            .diwali-tagline span {
+                font-family: var(--font-festive);
+                font-size: 1.05rem;
+                letter-spacing: 0;
             }
 
             .hero-shine-text {
-                background: linear-gradient(90deg, #fde68a, #fbbf24 30%, #fb923c 60%, #f43f5e);
+                background: linear-gradient(90deg, #fde68a, #fbbf24 30%, #f97316 60%, #ef4444);
                 -webkit-background-clip: text;
                 background-clip: text;
             }
 
             .hero-chip {
-                color: #fef3c7;
-                border-color: rgba(251, 191, 36, 0.45);
-                background: rgba(251, 191, 36, 0.12);
+                color: #ffedd5;
+                border-color: rgba(249, 115, 22, 0.5);
+                background: rgba(249, 115, 22, 0.14);
             }
 
             .hero-chip-dot,
             .site-footer .footer-chip-dot {
-                background: #fbbf24;
+                background: #f97316;
             }
 
             .hero-chip-dot::after,
             .site-footer .footer-chip-dot::after {
-                border-color: #fbbf24;
+                border-color: #f97316;
             }
 
             .hero-lead {
-                color: rgba(254, 243, 199, 0.92);
+                color: rgba(255, 237, 213, 0.92);
             }
 
             .hero-trust li {
-                color: #fef3c7;
-                background: rgba(251, 191, 36, 0.1);
-                border-color: rgba(251, 191, 36, 0.3);
+                color: #ffedd5;
+                background: rgba(249, 115, 22, 0.12);
+                border-color: rgba(249, 115, 22, 0.35);
             }
 
             .hero-trust i {
@@ -3168,171 +3184,171 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             .hero-tap-hint {
                 margin-top: 1rem;
                 font-size: 0.8rem;
-                color: rgba(254, 243, 199, 0.65);
+                color: rgba(255, 237, 213, 0.65);
             }
 
-            /* ---------- Akash kandil (hanging lanterns) ---------- */
-            .kandil {
+            /* ---------- Fairy lights strung across the night sky ---------- */
+            .hero-bunting {
                 position: absolute;
-                top: 0;
+                top: 34px;
+                left: 0;
+                right: 0;
                 z-index: 3;
-                left: var(--x);
-                width: 46px;
+                display: flex;
+                justify-content: space-around;
+                height: 40px;
+                overflow: hidden;
                 pointer-events: none;
-                transform-origin: 50% 0;
-                animation: kandil-swing var(--swing, 5s) ease-in-out infinite alternate;
             }
 
-            .kandil-string {
-                display: block;
-                width: 2px;
-                height: var(--len, 60px);
-                margin: 0 auto;
-                background: linear-gradient(#fde68a, #b45309);
-            }
-
-            .kandil-body {
-                position: relative;
-                display: block;
-                width: 46px;
-                height: 56px;
-                background: radial-gradient(circle at 50% 50%, #fff7ed 0 10%, var(--c1) 45%, var(--c2) 100%);
-                clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0 70%, 0 30%);
-            }
-
-            .kandil-body::before {
+            .hero-bunting::before {
                 content: "";
-                position: absolute;
-                inset: 0;
-                background: repeating-linear-gradient(90deg, transparent 0 7px, rgba(255, 255, 255, 0.25) 7px 8px);
-            }
-
-            .kandil-glow {
-                position: absolute;
-                left: 50%;
-                top: calc(var(--len, 60px) + 28px);
-                width: 120px;
-                height: 120px;
-                margin: -60px 0 0 -60px;
-                border-radius: 50%;
-                background: radial-gradient(circle, var(--c1), transparent 65%);
-                opacity: 0.45;
-                z-index: -1;
-            }
-
-            .kandil-tassel {
-                display: block;
-                width: 18px;
-                height: 26px;
-                margin: -2px auto 0;
-                background: repeating-linear-gradient(90deg, var(--c2) 0 2px, transparent 2px 4px);
-                mask-image: linear-gradient(#000, transparent);
-                -webkit-mask-image: linear-gradient(#000, transparent);
-            }
-
-            @keyframes kandil-swing {
-                from {
-                    transform: rotate(-5deg);
-                }
-
-                to {
-                    transform: rotate(5deg);
-                }
-            }
-
-            @media (max-width: 1023px) {
-                .kandil.kandil-wide {
-                    display: none;
-                }
-            }
-
-            @media (max-width: 640px) {
-                .kandil {
-                    display: none;
-                }
-            }
-
-            /* ---------- Diyas ---------- */
-            .diya-row {
                 position: absolute;
                 left: 0;
                 right: 0;
-                bottom: 44px;
-                z-index: 6;
-                display: flex;
-                justify-content: space-around;
-                padding: 0 4%;
-                pointer-events: none;
+                top: 2px;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, #fde68a 8%, #fde68a 92%, transparent);
+                opacity: 0.7;
             }
 
-            .diya {
+            /* Fairy lights (ladi) twinkling on the wire */
+            .hero-bunting span,
+            .footer-bunting span {
+                --bulb: #fbbf24;
+                flex: 0 0 10px;
+                height: 14px;
+                margin-top: 5px;
+                border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+                background: var(--bulb);
+                box-shadow: 0 0 10px 3px var(--bulb);
+                animation: bulb-twinkle 1.6s ease-in-out infinite alternate;
+            }
+
+            :is(.hero-bunting, .footer-bunting) span:nth-child(4n + 2) {
+                --bulb: #f472b6;
+            }
+
+            :is(.hero-bunting, .footer-bunting) span:nth-child(4n + 3) {
+                --bulb: #34d399;
+            }
+
+            :is(.hero-bunting, .footer-bunting) span:nth-child(4n) {
+                --bulb: #60a5fa;
+            }
+
+            :is(.hero-bunting, .footer-bunting) span:nth-child(even) {
+                animation-delay: -0.8s;
+            }
+
+            @keyframes bulb-twinkle {
+                from {
+                    opacity: 0.35;
+                    box-shadow: 0 0 2px 0 var(--bulb);
+                }
+
+                to {
+                    opacity: 1;
+                    box-shadow: 0 0 12px 4px var(--bulb);
+                }
+            }
+
+            /* ---------- Lakshmi ji, Ganesh ji & Saraswati ji with aarti (above Business Details) ---------- */
+            .puja-stage {
                 position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 1.5rem;
+            }
+
+            .puja-art-wrap {
+                position: relative;
+                width: min(560px, 100%);
+                overflow: hidden;
+                padding-top: 8px;
+            }
+
+            .puja-art {
                 display: block;
-                width: 44px;
-                height: 18px;
-                border-radius: 0 0 50% 50% / 0 0 100% 100%;
-                background: linear-gradient(180deg, #fbbf24 0 14%, #c2410c 15%, #7c2d12 100%);
-                box-shadow: inset 0 -4px 6px rgba(0, 0, 0, 0.35);
+                width: 100%;
+                height: auto;
+                filter: drop-shadow(0 12px 24px rgba(154, 52, 18, 0.22));
             }
 
-            .diya::before {
-                content: "";
-                position: absolute;
-                left: 50%;
-                bottom: 85%;
-                width: 12px;
-                height: 22px;
-                margin-left: -6px;
-                border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
-                background: radial-gradient(ellipse at 50% 75%, #fff 0 18%, #fde047 35%, #f97316 70%, rgba(249, 115, 22, 0) 74%);
+            .pj-shubh {
+                font-family: var(--font-festive);
+                font-size: 20px;
+                fill: #b91c1c;
+            }
+
+
+            /* Outer group circles the aarti path; the inner group counter-rotates so the thali stays level. */
+            .pj-aarti {
+                transform-origin: 180px 170px;
+                animation: aarti-circle 4.5s linear infinite;
+            }
+
+            .pj-aarti-plate {
+                transform-origin: 180px 204px;
+                animation: aarti-circle 4.5s linear infinite reverse;
+            }
+
+            @keyframes aarti-circle {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .pj-flame {
+                transform-box: fill-box;
                 transform-origin: 50% 100%;
-                animation: diya-flicker 1.4s ease-in-out infinite alternate;
-                animation-delay: var(--d, 0s);
+                animation: flame-lick 0.45s ease-in-out infinite alternate;
             }
 
-            .diya::after {
-                content: "";
-                position: absolute;
-                left: 50%;
-                bottom: 40%;
-                width: 90px;
-                height: 90px;
-                margin-left: -45px;
-                margin-bottom: -20px;
-                border-radius: 50%;
-                background: radial-gradient(circle, rgba(251, 191, 36, 0.45), transparent 65%);
-                pointer-events: none;
+
+            .puja-diyas {
+                padding-top: 22px;
+                margin-bottom: 0.5rem;
             }
 
-            @keyframes diya-flicker {
+            @keyframes flame-lick {
                 0% {
-                    transform: scale(1, 1) rotate(-2deg);
-                    opacity: 0.95;
+                    transform: scale(1, 1) skewX(-3deg);
+                    opacity: 0.9;
                 }
 
                 50% {
-                    transform: scale(0.92, 1.08) rotate(2deg);
+                    transform: scale(0.85, 1.22) skewX(4deg);
                     opacity: 1;
                 }
 
                 100% {
-                    transform: scale(1.05, 0.94) rotate(-1deg);
-                    opacity: 0.88;
+                    transform: scale(1.08, 0.9) skewX(-2deg);
+                    opacity: 0.85;
                 }
             }
 
             @media (max-width: 767px) {
-                .diya-row .diya:nth-child(n + 6) {
+                .hero-bunting span:nth-child(n + 16) {
                     display: none;
                 }
             }
 
-            .footer-diyas {
+            .footer-bunting {
                 display: flex;
                 justify-content: center;
-                gap: 28px;
+                gap: 14px;
                 padding-top: 22px;
                 margin-bottom: 18px;
+                border-top: 2px solid rgba(253, 230, 138, 0.5);
+                max-width: 360px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .footer-bunting span {
+                margin-top: 0;
             }
 
             .diwali-footer-wish {
@@ -3343,33 +3359,33 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 margin-bottom: 1.5rem;
             }
 
-            /* ---------- Rangoli ---------- */
-            .rangoli {
+            /* ---------- Rangoli motif watermark ---------- */
+            .surya-motif {
                 position: absolute;
                 z-index: 0;
                 width: 340px;
                 height: 340px;
                 border-radius: 50%;
                 pointer-events: none;
-                opacity: 0.2;
-                background: radial-gradient(circle, #fde047 0 6%, #e11d48 6% 9%, transparent 9.5%),
-                    repeating-conic-gradient(#e11d48 0 7.5deg, #f59e0b 7.5deg 15deg, #7c3aed 15deg 22.5deg, #16a34a 22.5deg 30deg);
-                mask-image: repeating-radial-gradient(circle, #000 0 16px, transparent 16px 22px);
-                -webkit-mask-image: repeating-radial-gradient(circle, #000 0 16px, transparent 16px 22px);
-                animation: rangoli-spin 90s linear infinite;
+                opacity: 0.16;
+                background: radial-gradient(circle, #fde047 0 13%, #db2777 13% 16%, #f59e0b 16% 22%, transparent 22.5%),
+                    repeating-conic-gradient(#f97316 0 5deg, transparent 5deg 10deg, #ec4899 10deg 15deg, transparent 15deg 20deg);
+                mask-image: radial-gradient(circle, #000 0 68%, transparent 70%);
+                -webkit-mask-image: radial-gradient(circle, #000 0 68%, transparent 70%);
+                animation: surya-spin 120s linear infinite;
             }
 
-            .rangoli-left {
+            .surya-left {
                 left: -140px;
                 top: 40px;
             }
 
-            .rangoli-right {
+            .surya-right {
                 right: -140px;
                 bottom: 20px;
             }
 
-            @keyframes rangoli-spin {
+            @keyframes surya-spin {
                 to {
                     rotate: 360deg;
                 }
@@ -3396,96 +3412,96 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
 
             .btn-secondary,
             .add-to-cart-btn {
-                background: linear-gradient(135deg, #f97316, #e11d48 60%, #be123c);
-                box-shadow: 0 10px 30px -10px rgba(225, 29, 72, 0.6);
+                background: linear-gradient(135deg, #f97316, #dc2626 60%, #b91c1c);
+                box-shadow: 0 10px 30px -10px rgba(220, 38, 38, 0.6);
             }
 
             .enquiry-trigger-btn {
-                background: linear-gradient(135deg, #d97706, #b45309);
-                box-shadow: 0 6px 16px -6px rgba(217, 119, 6, 0.6);
+                background: linear-gradient(135deg, #ea580c, #c2410c);
+                box-shadow: 0 6px 16px -6px rgba(234, 88, 12, 0.6);
             }
 
             .enquiry-trigger-btn:hover {
-                background: linear-gradient(135deg, #b45309, #92400e);
+                background: linear-gradient(135deg, #c2410c, #9a3412);
             }
 
             .cart-icon-btn {
-                background: linear-gradient(135deg, #f97316, #e11d48);
+                background: linear-gradient(135deg, #f97316, #dc2626);
             }
 
             .bg-blue-600 {
-                background-color: #b45309;
+                background-color: #c2410c;
             }
 
             .hover\:bg-blue-700:hover {
-                background-color: #92400e;
+                background-color: #9a3412;
             }
 
             .feature-card::before,
             .glass-card::before,
             .product-card::before {
-                background: linear-gradient(135deg, rgba(251, 191, 36, 0.9), rgba(225, 29, 72, 0.7) 50%, rgba(249, 115, 22, 0.8));
+                background: linear-gradient(135deg, rgba(251, 191, 36, 0.9), rgba(220, 38, 38, 0.7) 50%, rgba(249, 115, 22, 0.8));
             }
 
             .feature-card,
             .glass-card,
             .product-card {
-                border-color: rgba(251, 191, 36, 0.35);
+                border-color: rgba(249, 115, 22, 0.3);
             }
 
             .product-spotlight {
-                background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(251, 191, 36, 0.18), transparent 45%);
+                background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(249, 115, 22, 0.16), transparent 45%);
             }
 
             .product-card .group-hover\:text-blue-600,
             .group:hover .group-hover\:text-blue-600 {
-                color: #be123c;
+                color: #b91c1c;
             }
 
             .product-marquee i {
-                color: #f59e0b;
+                color: #f97316;
             }
 
             .product-marquee span {
-                background: linear-gradient(90deg, #7f1d1d, #be123c 25%, #ea580c 50%, #d97706 75%, #7f1d1d);
+                background: linear-gradient(90deg, #7f1d1d, #dc2626 25%, #ea580c 50%, #d97706 75%, #7f1d1d);
                 -webkit-background-clip: text;
                 background-clip: text;
             }
 
             #productSearch:focus {
-                border-color: #d97706;
-                box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.25);
+                border-color: #ea580c;
+                box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.22);
             }
 
             .group[open] .group-open\:from-orange-500 {
-                --tw-gradient-from: #be123c var(--tw-gradient-from-position);
+                --tw-gradient-from: #dc2626 var(--tw-gradient-from-position);
                 --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
             }
 
             .group[open] .group-open\:to-orange-600 {
-                --tw-gradient-to: #d97706 var(--tw-gradient-to-position);
+                --tw-gradient-to: #f97316 var(--tw-gradient-to-position);
             }
 
             /* ---------- Footer ---------- */
             .site-footer {
-                background: radial-gradient(600px 300px at 90% 0%, rgba(251, 191, 36, 0.18), transparent 60%),
-                    radial-gradient(600px 300px at 0% 100%, rgba(190, 18, 60, 0.35), transparent 60%),
-                    linear-gradient(160deg, #1a0630, #3b0a24 55%, #5b1414);
+                background: radial-gradient(600px 300px at 90% 0%, rgba(249, 115, 22, 0.22), transparent 60%),
+                    radial-gradient(600px 300px at 0% 100%, rgba(220, 38, 38, 0.3), transparent 60%),
+                    linear-gradient(160deg, #1e0b3a, #4a1030 55%, #7c2d12);
             }
 
             .site-footer .footer-brand-name,
             .site-footer .footer-credentials {
-                background: linear-gradient(90deg, #fde68a, #fbbf24, #fb923c, #fde68a);
+                background: linear-gradient(90deg, #fde68a, #fbbf24, #f97316, #fde68a);
                 -webkit-background-clip: text;
                 background-clip: text;
             }
 
             .site-footer .social-icon-link:hover {
-                background: linear-gradient(135deg, #f59e0b, #e11d48);
+                background: linear-gradient(135deg, #f97316, #dc2626);
             }
 
-            /* ---------- Add-to-cart spark burst ---------- */
-            .diwali-spark {
+            /* ---------- Add-to-cart ember burst ---------- */
+            .festive-spark {
                 position: fixed;
                 z-index: 10000;
                 width: 7px;
@@ -3493,154 +3509,32 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 margin: -3.5px 0 0 -3.5px;
                 border-radius: 50%;
                 pointer-events: none;
-                background: var(--c, #fbbf24);
-                box-shadow: 0 0 8px 2px var(--c, #fbbf24);
+                background: var(--c, #f97316);
+                box-shadow: 0 0 8px 2px var(--c, #f97316);
             }
 
-            /* ================================================================
-               More Diwali: twinkling stars, Shubh-Labh, marigold petal rain,
-               garlanded product cards, diya dividers, corner mandalas and a
-               footer toran. Decorative only (aria-hidden); the global
-               prefers-reduced-motion rule stops every animation here.
-               ================================================================ */
-
-            /* Faint golden sparkle pattern over the whole page background */
-            body::before {
-                background:
-                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><g fill="%23d97706" fill-opacity="0.13"><path d="M30 18l2.2 7.8L40 28l-7.8 2.2L30 38l-2.2-7.8L20 28l7.8-2.2z"/><path d="M90 78l1.6 5.4L97 85l-5.4 1.6L90 92l-1.6-5.4L83 85l5.4-1.6z"/><circle cx="90" cy="24" r="1.6"/><circle cx="24" cy="92" r="1.6"/><circle cx="60" cy="60" r="1.2"/></g></svg>') 0 0 / 120px 120px,
-                    radial-gradient(40vw 40vw at 0% 30%, rgba(251, 191, 36, 0.12), transparent 70%),
-                    radial-gradient(35vw 35vw at 100% 60%, rgba(225, 29, 72, 0.08), transparent 70%),
-                    radial-gradient(30vw 30vw at 50% 100%, rgba(234, 88, 12, 0.08), transparent 70%);
-            }
-
-            /* ---------- Twinkling stars in the hero (Amavasya night sky) ---------- */
-            .diwali-stars,
-            .diwali-stars::before {
-                position: absolute;
-                inset: 0 0 35% 0;
-                z-index: 1;
-                pointer-events: none;
-                background:
-                    radial-gradient(1.5px 1.5px at 8% 18%, #fff, transparent),
-                    radial-gradient(1px 1px at 17% 42%, #fde68a, transparent),
-                    radial-gradient(1.5px 1.5px at 26% 9%, #fff, transparent),
-                    radial-gradient(1px 1px at 37% 30%, #fff, transparent),
-                    radial-gradient(2px 2px at 48% 14%, #fde68a, transparent),
-                    radial-gradient(1px 1px at 58% 38%, #fff, transparent),
-                    radial-gradient(1.5px 1.5px at 67% 7%, #fff, transparent),
-                    radial-gradient(1px 1px at 76% 33%, #fde68a, transparent),
-                    radial-gradient(1.5px 1.5px at 88% 20%, #fff, transparent),
-                    radial-gradient(1px 1px at 95% 45%, #fff, transparent);
-                animation: star-twinkle 3.2s ease-in-out infinite alternate;
-            }
-
-            .diwali-stars::before {
-                content: "";
-                inset: 0;
-                transform: translate(4%, 6%) scaleX(-1);
-                animation-duration: 4.1s;
-                animation-delay: -2s;
-            }
-
-            @keyframes star-twinkle {
-                from {
-                    opacity: 0.35;
-                }
-
-                to {
-                    opacity: 1;
-                }
-            }
-
-            /* ---------- Shubh-Labh (traditional Diwali blessing for a business) ---------- */
-            .shubh-labh {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 14px;
-                margin-top: 1.25rem;
-                font-family: var(--font-festive);
-                font-size: clamp(1rem, 0.85rem + 0.6vw, 1.3rem);
-                color: #fde68a;
-            }
-
-            .shubh-labh span:not(.shubh-labh-line) {
-                padding: 2px 14px;
-                border: 1px solid rgba(251, 191, 36, 0.5);
+            /* ---------- Diwali countdown pill (filled by JS, hidden while empty) ---------- */
+            .diwali-countdown {
+                display: inline-block;
+                margin-left: 0.5rem;
+                padding: 1px 10px;
                 border-radius: 999px;
-                background: rgba(127, 29, 29, 0.35);
-                box-shadow: 0 0 18px -4px rgba(251, 191, 36, 0.6);
+                font-size: 0.78rem;
+                font-weight: 700;
+                color: #fde68a;
+                background: rgba(253, 230, 138, 0.16);
+                border: 1px solid rgba(253, 230, 138, 0.45);
+                white-space: nowrap;
             }
 
-            .shubh-labh-line {
-                width: clamp(28px, 8vw, 80px);
-                height: 1px;
-                background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+            .diwali-countdown:empty {
+                display: none;
             }
 
-            .shubh-labh + .diwali-greeting {
-                margin-top: 0.5rem;
-            }
-
-            /* ---------- Marigold petal rain ---------- */
-            .petal-rain {
-                position: fixed;
-                inset: 0;
-                z-index: 40;
-                overflow: hidden;
-                pointer-events: none;
-            }
-
-            .petal {
-                position: absolute;
-                top: -24px;
-                left: var(--x);
-                width: 11px;
-                height: 15px;
-                border-radius: 60% 0 60% 0;
-                background: radial-gradient(circle at 30% 30%, #fde047, var(--pc, #f59e0b) 60%, #c2410c);
-                opacity: 0;
-                animation: petal-fall var(--dur, 14s) linear infinite;
-                animation-delay: var(--d, 0s);
-            }
-
-            @keyframes petal-fall {
-                0% {
-                    opacity: 0;
-                    transform: translate(0, 0) rotate(0deg);
-                }
-
-                8% {
-                    opacity: 0.75;
-                }
-
-                50% {
-                    transform: translate(40px, 55vh) rotate(260deg);
-                }
-
-                90% {
-                    opacity: 0.6;
-                }
-
-                100% {
-                    opacity: 0;
-                    transform: translate(-20px, 108vh) rotate(540deg);
-                }
-            }
-
-            @media (max-width: 767px) {
-                .petal:nth-child(n + 7) {
-                    display: none;
-                }
-            }
-
-            /* ---------- Section dividers carry a diya ---------- */
+            /* ---------- Diya ornament on section dividers ---------- */
             .section-divider.max-w-xs {
                 position: relative;
-                max-width: 180px;
-                margin-top: 1.6rem;
                 overflow: visible;
-                background: linear-gradient(90deg, transparent, #e11d48 20%, #f59e0b 40%, transparent 40% 60%, #f59e0b 60%, #e11d48 80%, transparent);
             }
 
             .section-divider.max-w-xs::after {
@@ -3648,354 +3542,234 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%, -62%);
-                font-size: 1.35rem;
+                translate: -50% -50%;
+                font-size: 1.15rem;
                 line-height: 1;
-                filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.8));
+                filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.55));
             }
 
-            /* ---------- Product cards wear a marigold garland ---------- */
-            .product-card::after {
-                content: "";
+            /* ---------- Click anywhere: marigold petal shower on the deities ---------- */
+            .pj-petal {
                 position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 4;
-                height: 22px;
-                pointer-events: none;
-                background:
-                    radial-gradient(circle at 8px 7px, #fde047 0 2.5px, #f59e0b 3px 6px, transparent 6.5px) 0 0 / 30px 14px repeat-x,
-                    radial-gradient(circle at 8px 7px, #fb923c 0 2.5px, #ea580c 3px 6px, transparent 6.5px) 15px 0 / 30px 14px repeat-x,
-                    radial-gradient(ellipse 3.5px 7px at 30px 15px, #15803d 0 85%, transparent 100%) 0 0 / 60px 22px repeat-x;
-                filter: drop-shadow(0 2px 2px rgba(127, 29, 29, 0.25));
-            }
-
-            .product-tag {
-                top: 26px;
-            }
-
-            .product-card .p-6 {
-                background: linear-gradient(180deg, transparent 70%, rgba(254, 243, 199, 0.55));
-            }
-
-            .qty-btn.active {
-                background: linear-gradient(135deg, #f59e0b, #d97706);
-                box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
-            }
-
-            .qty-btn:hover {
-                border-color: #d97706;
-                color: #b45309;
-            }
-
-            /* ---------- Corner mandala on info cards ---------- */
-            .feature-card,
-            #contact .glass-card {
-                isolation: isolate;
-                overflow: hidden;
-            }
-
-            .feature-card::after,
-            #contact .glass-card::after {
-                content: "";
-                position: absolute;
-                z-index: -1;
-                top: -46px;
-                right: -46px;
-                width: 140px;
-                height: 140px;
-                border-radius: 50%;
-                pointer-events: none;
-                opacity: 0.16;
-                background: radial-gradient(circle, #fde047 0 7%, #e11d48 7% 10%, transparent 10.5%),
-                    repeating-conic-gradient(#e11d48 0 10deg, #f59e0b 10deg 20deg, #d97706 20deg 30deg);
-                mask-image: repeating-radial-gradient(circle, #000 0 10px, transparent 10px 14px);
-                -webkit-mask-image: repeating-radial-gradient(circle, #000 0 10px, transparent 10px 14px);
-                transition: opacity 0.4s ease, rotate 1.2s var(--ease-standard);
-            }
-
-            .feature-card:hover::after,
-            #contact .glass-card:hover::after {
-                opacity: 0.3;
-                rotate: 45deg;
-            }
-
-            /* Extra rangoli for the products and contact sections + footer */
-            .rangoli-products {
-                right: -150px;
-                top: 120px;
-                opacity: 0.14;
-                background: radial-gradient(circle, #fde047 0 6%, #be123c 6% 9%, transparent 9.5%),
-                    repeating-conic-gradient(#f97316 0 10deg, #be123c 10deg 20deg, #fbbf24 20deg 30deg, #0f766e 30deg 40deg);
-            }
-
-            .rangoli-contact {
-                left: -150px;
-                bottom: -40px;
-                animation-direction: reverse;
-            }
-
-            #products > .container {
-                position: relative;
-                z-index: 1;
-            }
-
-            #products,
-            #contact {
-                overflow-x: clip;
-            }
-
-            /* ---------- Footer: toran on top, rangoli behind the wish ---------- */
-            .site-footer::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 30px;
-                pointer-events: none;
-                background:
-                    radial-gradient(circle at 9px 8px, #fde047 0 3px, #f59e0b 3.5px 7px, transparent 7.5px) 0 0 / 36px 16px repeat-x,
-                    radial-gradient(circle at 9px 8px, #fb923c 0 3px, #ea580c 3.5px 7px, transparent 7.5px) 18px 0 / 36px 16px repeat-x,
-                    radial-gradient(ellipse 5px 10px at 36px 20px, #15803d 0 85%, transparent 100%) 0 0 / 72px 30px repeat-x,
-                    radial-gradient(circle at 36px 27px, #e11d48 0 3px, transparent 3.5px) 0 0 / 72px 30px repeat-x;
-            }
-
-            .site-footer {
-                padding-top: 4rem;
-            }
-
-            .site-footer .rangoli-footer {
-                left: 50%;
-                top: auto;
-                bottom: -170px;
-                z-index: -1;
-                margin-left: -170px;
-                opacity: 0.12;
-            }
-
-            .diwali-footer-wish {
-                text-shadow: 0 0 22px rgba(251, 191, 36, 0.45);
-            }
-
-            .site-footer .border-slate-700 {
-                border-color: rgba(251, 191, 36, 0.25);
-            }
-
-            /* ---------- Cart & modal headers: gold trim ---------- */
-            .cart-panel-header,
-            .assistant-panel-header,
-            .enquiry-modal-header {
-                border-bottom: 3px dotted #fbbf24;
-            }
-
-            .cart-badge {
-                background: #fbbf24;
-                color: #7f1d1d;
-                box-shadow: 0 0 10px rgba(251, 191, 36, 0.8);
-            }
-
-            /* ================================================================
-               Even more Diwali: countdown in the ribbon, ladi (string lights),
-               rising sky lanterns, Lakshmi charan footprints, the five days
-               of Diwali strip, a phuljhadi cursor trail and a glowing cart.
-               Decorative only; reduced motion stops all of it.
-               ================================================================ */
-
-            /* ---------- Ribbon countdown ---------- */
-            .diwali-countdown {
-                display: inline-flex;
-                align-items: center;
-                gap: 6px;
-                margin-left: 10px;
-                padding: 2px 10px;
-                border-radius: 999px;
-                font-size: 0.75rem;
-                font-weight: 700;
-                color: #7f1d1d;
-                background: linear-gradient(135deg, #fde68a, #fbbf24);
-                box-shadow: 0 0 12px rgba(251, 191, 36, 0.6);
-                white-space: nowrap;
-            }
-
-            .diwali-countdown[hidden] {
-                display: none;
-            }
-
-            /* ---------- Ladi: twinkling string lights ---------- */
-            .diwali-ladi {
-                position: relative;
-                height: 30px;
-                margin: 0 auto;
-                overflow: hidden;
-                pointer-events: none;
-            }
-
-            .diwali-ladi::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                height: 14px;
-                border-bottom: 1.5px solid rgba(120, 53, 15, 0.45);
-                border-radius: 0 0 50% 50% / 0 0 100% 100%;
-            }
-
-            .diwali-ladi span {
-                position: absolute;
-                top: calc(var(--sag, 0px) + 1px);
-                left: var(--x);
-                width: 8px;
+                top: -14px;
+                z-index: 2;
+                width: 9px;
                 height: 12px;
-                margin-left: -4px;
-                border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-                background: var(--c);
-                box-shadow: 0 0 8px 2px var(--c);
-                animation: ladi-twinkle 1.6s ease-in-out infinite alternate;
-                animation-delay: var(--d, 0s);
-            }
-
-            .diwali-ladi span::before {
-                content: "";
-                position: absolute;
-                top: -3px;
-                left: 2px;
-                width: 4px;
-                height: 4px;
-                border-radius: 1px;
-                background: #78350f;
-            }
-
-            @keyframes ladi-twinkle {
-                0% {
-                    opacity: 0.35;
-                    box-shadow: 0 0 2px 0 var(--c);
-                }
-
-                100% {
-                    opacity: 1;
-                    box-shadow: 0 0 12px 3px var(--c);
-                }
-            }
-
-            /* ---------- Sky lanterns rising through the hero ---------- */
-            .sky-lanterns {
-                position: absolute;
-                inset: 0;
-                overflow: hidden;
+                border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+                background: var(--c, #f59e0b);
+                box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.12);
                 pointer-events: none;
-                z-index: 1;
+                animation: petal-fall 2.4s ease-in forwards;
             }
 
-            .sky-lantern {
-                position: absolute;
-                bottom: -60px;
-                left: var(--x);
-                width: 22px;
-                height: 30px;
-                border-radius: 40% 40% 30% 30% / 50% 50% 25% 25%;
-                background: radial-gradient(ellipse at 50% 85%, #fff7cc 0%, #fbbf24 35%, #ea580c 80%, #9a3412 100%);
-                box-shadow:
-                    0 0 18px 4px rgba(251, 146, 60, 0.55),
-                    0 0 40px 10px rgba(251, 191, 36, 0.2);
-                opacity: 0;
-                scale: var(--s, 1);
-                animation: lantern-rise var(--dur, 22s) linear infinite;
-                animation-delay: var(--d, 0s);
-            }
-
-            @keyframes lantern-rise {
+            @keyframes petal-fall {
                 0% {
-                    transform: translate(0, 0) rotate(-3deg);
+                    transform: translate(0, 0) rotate(0deg);
                     opacity: 0;
                 }
 
                 10% {
-                    opacity: 0.9;
-                }
-
-                50% {
-                    transform: translate(18px, -55vh) rotate(3deg);
+                    opacity: 1;
                 }
 
                 85% {
-                    opacity: 0.7;
+                    opacity: 1;
                 }
 
                 100% {
-                    transform: translate(-10px, -105vh) rotate(-2deg);
+                    transform: translate(var(--drift, 0px), 300px) rotate(var(--spin, 360deg));
                     opacity: 0;
                 }
             }
 
-            @media (max-width: 767px) {
-                .sky-lantern:nth-child(n + 5) {
-                    display: none;
+            .puja-blessing {
+                position: absolute;
+                left: 50%;
+                top: 30%;
+                z-index: 12;
+                translate: -50% 0;
+                width: max-content;
+                max-width: calc(100% - 32px);
+                padding: 12px 26px;
+                border-radius: 18px;
+                text-align: center;
+                font-family: var(--font-festive);
+                font-size: clamp(1.4rem, 1rem + 2vw, 2.4rem);
+                line-height: 1.25;
+                color: #fde68a;
+                background: rgba(59, 10, 10, 0.94);
+                backdrop-filter: blur(6px);
+                border: 1px solid rgba(251, 191, 36, 0.55);
+                box-shadow: 0 0 40px rgba(249, 115, 22, 0.5);
+                pointer-events: none;
+                opacity: 0;
+                scale: 0.8;
+                transition:
+                    opacity 0.4s ease,
+                    scale 0.5s var(--ease-spring);
+            }
+
+            .puja-blessing.show {
+                opacity: 1;
+                scale: 1;
+            }
+
+            .puja-blessing small {
+                display: block;
+                margin-top: 4px;
+                font-family: "Inter", sans-serif;
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: #fed7aa;
+            }
+
+            .hint-puja {
+                display: none;
+            }
+            /* ---------- Right-side quick links (All Products / Contact Us) ---------- */
+            /* .quick-links {
+                position: fixed;
+                right: 0;
+                top: 50%;
+                z-index: 55;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 10px;
+                translate: 110% -50%;
+                visibility: hidden;
+                transition:
+                    translate 0.45s var(--ease-spring),
+                    visibility 0s linear 0.45s;
+            } */
+
+            .quick-links.show {
+                translate: 0 -50%;
+                visibility: visible;
+                transition:
+                    translate 0.45s var(--ease-spring),
+                    visibility 0s;
+            }
+
+            .quick-link {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 12px 18px 12px 16px;
+                border-radius: 14px 0 0 14px;
+                border: 1px solid rgba(253, 230, 138, 0.55);
+                border-right: 0;
+                background: linear-gradient(135deg, #ea580c, #b91c1c);
+                box-shadow: 0 10px 26px rgba(185, 28, 28, 0.35);
+                color: #fff;
+                font-size: 0.95rem;
+                font-weight: 700;
+                transition:
+                    padding-right 0.25s ease,
+                    box-shadow 0.25s ease;
+            }
+
+            .quick-link:hover {
+                padding-right: 26px;
+                box-shadow: 0 14px 32px rgba(185, 28, 28, 0.5);
+            }
+
+            .quick-link-contact {
+                background: linear-gradient(135deg, #2563eb, #1e3a8a);
+                box-shadow: 0 10px 26px rgba(30, 58, 138, 0.35);
+            }
+
+            .quick-link-contact:hover {
+                box-shadow: 0 14px 32px rgba(30, 58, 138, 0.5);
+            }
+
+            .quick-links-close {
+                width: 28px;
+                height: 28px;
+                margin-right: 8px;
+                border-radius: 50%;
+                border: 1px solid rgba(251, 191, 36, 0.5);
+                background: rgba(28, 10, 10, 0.8);
+                color: #fde68a;
+                font-size: 0.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            @media (max-width: 640px) {
+                .quick-link {
+                    gap: 8px;
+                    padding: 10px 12px;
+                    font-size: 0.82rem;
                 }
             }
 
-            /* ---------- Lakshmi charan (footprints) walking into the products ---------- */
-            .lakshmi-charan {
+            @media (min-width: 768px) {
+                .hero-gradient.puja-on .hint-puja {
+                    display: inline;
+                }
+            }
+
+            /* ---------- Footer diyas ---------- */
+            .diya-row {
                 display: flex;
                 justify-content: center;
-                align-items: flex-end;
-                gap: 18px;
-                margin: 0.5rem auto 1.25rem;
-                height: 54px;
-                pointer-events: none;
+                gap: clamp(16px, 4vw, 36px);
+                padding-top: 18px;
+                margin-bottom: 0.5rem;
             }
 
-            .lakshmi-charan span {
-                width: 18px;
-                height: 34px;
-                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 34"><g fill="%23dc2626"><ellipse cx="9" cy="21" rx="6.5" ry="11"/><circle cx="3.6" cy="7.4" r="1.9"/><circle cx="7.4" cy="4.6" r="2.2"/><circle cx="11.6" cy="4.6" r="2"/><circle cx="14.6" cy="7" r="1.7"/><circle cx="16" cy="10.4" r="1.4"/></g><circle cx="9" cy="20" r="2.2" fill="%23fbbf24"/></svg>') center / contain no-repeat;
-                opacity: 0;
-                animation: charan-step 6s ease-in-out infinite;
+            .diya {
+                position: relative;
+                width: 38px;
+                height: 16px;
+                border-radius: 0 0 20px 20px / 0 0 16px 16px;
+                background: linear-gradient(180deg, #d97706, #92400e);
+                box-shadow:
+                    inset 0 3px 0 #fbbf24,
+                    0 4px 10px rgba(0, 0, 0, 0.35);
             }
 
-            .lakshmi-charan span:nth-child(odd) {
-                transform: translateY(-14px) rotate(-8deg) scaleX(-1);
+            .diya::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: 100%;
+                width: 10px;
+                height: 18px;
+                margin: 0 0 -3px -5px;
+                border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                background: radial-gradient(ellipse at 50% 80%, #fff 0 15%, #fde047 35%, #f97316 65%, rgba(220, 38, 38, 0) 75%);
+                transform-origin: 50% 100%;
+                filter: drop-shadow(0 0 6px #f97316);
+                animation: flame-lick 0.8s ease-in-out infinite alternate;
+                animation-delay: var(--d, 0s);
             }
 
-            .lakshmi-charan span:nth-child(even) {
-                transform: rotate(8deg);
+            /* ---------- Popups: marigold toran strip + leftover blue accents ---------- */
+            .cart-panel-header,
+            .assistant-panel-header,
+            .enquiry-modal-header {
+                border-bottom: 4px solid transparent;
+                border-image: repeating-linear-gradient(90deg, #fde047 0 8px, #f97316 8px 16px, #dc2626 16px 24px, #15803d 24px 30px) 1;
             }
 
-            .lakshmi-charan span:nth-child(1) { animation-delay: 0s; }
-            .lakshmi-charan span:nth-child(2) { animation-delay: 0.5s; }
-            .lakshmi-charan span:nth-child(3) { animation-delay: 1s; }
-            .lakshmi-charan span:nth-child(4) { animation-delay: 1.5s; }
-            .lakshmi-charan span:nth-child(5) { animation-delay: 2s; }
-            .lakshmi-charan span:nth-child(6) { animation-delay: 2.5s; }
-
-            @keyframes charan-step {
-                0%,
-                5% {
-                    opacity: 0;
-                }
-
-                15%,
-                70% {
-                    opacity: 0.85;
-                }
-
-                90%,
-                100% {
-                    opacity: 0;
-                }
+            .cart-qty-btn:hover,
+            .added-cart-qty-ctrl button:hover {
+                border-color: #ea580c;
+                color: #c2410c;
             }
 
-            /* Without animation the footprints stay visible instead of hidden */
-            @media (prefers-reduced-motion: reduce) {
-                .lakshmi-charan span {
-                    opacity: 0.85;
-                }
+            .enquiry-input:focus,
+            .enquiry-textarea:focus,
+            .assistant-input:focus {
+                border-color: #ea580c;
+            }
 
-                .sky-lantern {
-                    display: none;
-                }
+            .scroll-progress {
+                background: linear-gradient(90deg, #dc2626, #f97316, #fbbf24);
+                box-shadow: 0 0 12px rgba(249, 115, 22, 0.6);
             }
 
             /* ---------- Five days of Diwali ---------- */
@@ -4033,9 +3807,9 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 padding: 18px 14px 16px;
                 border-radius: 18px;
                 text-align: center;
-                background: linear-gradient(160deg, #fff7ed, #fef3c7);
-                border: 1.5px solid rgba(217, 119, 6, 0.35);
-                box-shadow: 0 10px 24px -12px rgba(180, 83, 9, 0.45);
+                background: linear-gradient(160deg, #fff7ed, #ffedd5);
+                border: 1.5px solid rgba(234, 88, 12, 0.35);
+                box-shadow: 0 10px 24px -12px rgba(154, 52, 18, 0.45);
                 transition:
                     transform 0.3s var(--ease-standard),
                     box-shadow 0.3s var(--ease-standard);
@@ -4046,20 +3820,20 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 position: absolute;
                 inset: 5px;
                 border-radius: 14px;
-                border: 1px dashed rgba(225, 29, 72, 0.3);
+                border: 1px dashed rgba(220, 38, 38, 0.3);
                 pointer-events: none;
             }
 
             .diwali-day:hover {
                 transform: translateY(-4px);
-                box-shadow: 0 16px 30px -12px rgba(225, 29, 72, 0.45);
+                box-shadow: 0 16px 30px -12px rgba(220, 38, 38, 0.45);
             }
 
             .diwali-day.is-main {
-                background: linear-gradient(160deg, #7f1d1d, #be123c);
-                border-color: #fbbf24;
+                background: linear-gradient(160deg, var(--diwali-maroon), var(--diwali-vermilion));
+                border-color: var(--diwali-gold);
                 color: #fff7ed;
-                box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3), 0 16px 34px -12px rgba(190, 18, 60, 0.7);
+                box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3), 0 16px 34px -12px rgba(220, 38, 38, 0.7);
             }
 
             .diwali-day-icon {
@@ -4067,7 +3841,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 font-size: 2rem;
                 line-height: 1;
                 margin-bottom: 8px;
-                filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.6));
+                filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.6));
             }
 
             .diwali-day-num {
@@ -4076,7 +3850,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 font-weight: 700;
                 letter-spacing: 0.16em;
                 text-transform: uppercase;
-                color: #b45309;
+                color: #c2410c;
             }
 
             .diwali-day.is-main .diwali-day-num {
@@ -4087,7 +3861,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 font-family: var(--font-festive);
                 font-size: 1.15rem;
                 margin: 2px 0 4px;
-                color: #9f1239;
+                color: #991b1b;
             }
 
             .diwali-day.is-main h3 {
@@ -4101,7 +3875,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             }
 
             .diwali-day.is-main p {
-                color: #ffe4e6;
+                color: #ffedd5;
             }
 
             @media (max-width: 1023px) {
@@ -4126,38 +3900,6 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 .diwali-day.is-main {
                     grid-column: 1 / -1;
                     order: -1;
-                }
-            }
-
-            /* ---------- Phuljhadi (sparkler) cursor trail ---------- */
-            .phuljhadi-spark {
-                position: fixed;
-                z-index: 9999;
-                width: 4px;
-                height: 4px;
-                margin: -2px 0 0 -2px;
-                border-radius: 50%;
-                pointer-events: none;
-                background: var(--c, #fde68a);
-                box-shadow: 0 0 6px 1px var(--c, #fbbf24);
-            }
-
-            /* ---------- Cart button glows like a diya ---------- */
-            .cart-icon-btn {
-                background: linear-gradient(135deg, #f59e0b, #e11d48);
-                animation: cart-diya-glow 2.4s ease-in-out infinite alternate;
-            }
-
-            @keyframes cart-diya-glow {
-                from {
-                    box-shadow: 0 8px 22px rgba(225, 29, 72, 0.35);
-                }
-
-                to {
-                    box-shadow:
-                        0 8px 26px rgba(225, 29, 72, 0.45),
-                        0 0 0 6px rgba(251, 191, 36, 0.18),
-                        0 0 24px 6px rgba(251, 191, 36, 0.35);
                 }
             }
         </style>
@@ -4243,55 +3985,46 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [
+                "@graph": [
                     {
-                        "@type": "Question",
-                        "name": "Do you supply bulk or only retail orders?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes, Swapnil Chemicals supplies both bulk and retail quantities. For wholesale pricing, call 9352470085 or 9024598298, or use the Enquiry button on any product."
-                        }
+                        "@type": "Product",
+                        "name": "Handcare",
+                        "image": "Handcare.webp",
+                        "description": "Premium hand cleaner for effective cleaning and care",
+                        "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
+                        "offers": { "@type": "Offer", "price": "200", "priceCurrency": "INR", "url": "#products" }
                     },
                     {
-                        "@type": "Question",
-                        "name": "What payment methods do you accept?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "We accept UPI and Google Pay - scan the QR code or pay to the UPI ID shown in the Contact section. Call us to discuss other payment arrangements."
-                        }
+                        "@type": "Product",
+                        "name": "Dishwash",
+                        "image": "Dishwash.webp",
+                        "description": "Powerful dishwash for effective grease and stain removal",
+                        "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
+                        "offers": { "@type": "Offer", "price": "150", "priceCurrency": "INR", "url": "#products" }
                     },
                     {
-                        "@type": "Question",
-                        "name": "Is Swapnil Chemicals a registered business?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes. We are GST registered (08CIJPS1734A1ZE), MSME certified (MSME/2020/6194), and Udyam registered (UDYAM-RJ-17-0022468)."
-                        }
+                        "@type": "Product",
+                        "name": "Detergent",
+                        "image": "Detergent.webp",
+                        "description": "Effective detergent for deep cleaning and fresh clothes",
+                        "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
+                        "offers": { "@type": "Offer", "price": "70", "priceCurrency": "INR", "url": "#products" }
                     },
                     {
-                        "@type": "Question",
-                        "name": "How do I place an order?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Pick a product, choose a quantity, and tap Add to Cart or Enquiry. Your request is sent directly to us on WhatsApp - no account or login needed."
-                        }
+                        "@type": "Product",
+                        "name": "Tiles Cleaner",
+                        "image": "Tiles Cleaner.webp",
+                        "description": "Powerful tile cleaner for removing dirt and stains",
+                        "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
+                        "offers": { "@type": "Offer", "price": "70", "priceCurrency": "INR", "url": "#products" }
                     },
                     {
-                        "@type": "Question",
-                        "name": "Where is Swapnil Chemicals based?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "We are based in Jaipur, Rajasthan, and support both bulk and retail customers."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Do you offer custom quantities or packaging?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "For requirements outside the listed options, contact us directly by phone or WhatsApp and we will get back to you."
-                        }
+                        "@type": "Product",
+                        "name": "Toilet Cleaner",
+                        "image": "Toilet Cleaner.webp",
+                        "description": "Powerful tile cleaner for removing dirt and stains",
+                        "brand": { "@type": "Brand", "name": "Swapnil Chemicals" },
+                        "offers": { "@type": "Offer", "price": "130", "priceCurrency": "INR", "url": "#products" }
                     }
                 ]
             }
@@ -4301,7 +4034,6 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
     <body class="min-h-screen text-gray-800">
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <div class="scroll-progress" id="scrollProgress"></div>
-        <div class="petal-rain" aria-hidden="true"><span class="petal" style="--x: 4%; --d: 0s; --dur: 13s; --pc: #f59e0b"></span><span class="petal" style="--x: 12%; --d: -6s; --dur: 16s; --pc: #ea580c"></span><span class="petal" style="--x: 21%; --d: -3s; --dur: 12s; --pc: #fbbf24"></span><span class="petal" style="--x: 30%; --d: -9s; --dur: 15s; --pc: #e11d48"></span><span class="petal" style="--x: 39%; --d: -1s; --dur: 14s; --pc: #f59e0b"></span><span class="petal" style="--x: 47%; --d: -11s; --dur: 17s; --pc: #ea580c"></span><span class="petal" style="--x: 55%; --d: -4s; --dur: 13s; --pc: #fbbf24"></span><span class="petal" style="--x: 63%; --d: -8s; --dur: 16s; --pc: #e11d48"></span><span class="petal" style="--x: 71%; --d: -2s; --dur: 12s; --pc: #f59e0b"></span><span class="petal" style="--x: 79%; --d: -10s; --dur: 15s; --pc: #ea580c"></span><span class="petal" style="--x: 87%; --d: -5s; --dur: 14s; --pc: #fbbf24"></span><span class="petal" style="--x: 95%; --d: -7s; --dur: 17s; --pc: #e11d48"></span></div>
 
         <noscript>
             <div
@@ -4322,9 +4054,9 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
         </noscript>
 
         <div class="diwali-ribbon" role="note">
-            🪔 <b lang="hi">शुभ दीपावली</b> &nbsp;·&nbsp; Happy Diwali from Swapnil Chemicals — wishing you light,
-            prosperity &amp; a sparkling ride ✨
-            <span class="diwali-countdown" id="diwaliCountdown" hidden></span>
+            🪔 <b lang="hi">शुभ दीपावली</b> &nbsp;·&nbsp; Happy Diwali from Swapnil Chemicals — may Maa Lakshmi fill your
+            home with light &amp; every ride shine ✨
+            <span class="diwali-countdown" id="diwaliCountdown"></span>
         </div>
 
         <header class="sticky top-0 z-50 nav-blur">
@@ -4386,15 +4118,8 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 </div>
                 <div class="hero-grid" aria-hidden="true"></div>
                 <div class="hero-bubbles" id="heroBubbles" aria-hidden="true"></div>
-                <div class="diwali-stars" aria-hidden="true"></div>
-                <canvas class="diwali-fireworks" id="diwaliFireworks" aria-hidden="true"></canvas>
-                <div class="sky-lanterns" aria-hidden="true"><span class="sky-lantern" style="--x: 6%; --d: 0s; --dur: 19s; --s: 1"></span><span class="sky-lantern" style="--x: 17%; --d: -7s; --dur: 24s; --s: 0.8"></span><span class="sky-lantern" style="--x: 28%; --d: -14s; --dur: 21s; --s: 1.15"></span><span class="sky-lantern" style="--x: 42%; --d: -3s; --dur: 26s; --s: 0.75"></span><span class="sky-lantern" style="--x: 58%; --d: -10s; --dur: 20s; --s: 1"></span><span class="sky-lantern" style="--x: 70%; --d: -17s; --dur: 23s; --s: 0.85"></span><span class="sky-lantern" style="--x: 81%; --d: -5s; --dur: 25s; --s: 1.1"></span><span class="sky-lantern" style="--x: 93%; --d: -12s; --dur: 22s; --s: 0.9"></span></div>
-                <div aria-hidden="true">
-                    <span class="kandil kandil-wide" style="--x: 3%; --len: 36px; --c1: #f97316; --c2: #b91c1c; --swing: 4.5s"><span class="kandil-string"></span><span class="kandil-glow"></span><span class="kandil-body"></span><span class="kandil-tassel"></span></span>
-                    <span class="kandil" style="--x: 11%; --len: 70px; --c1: #fbbf24; --c2: #c2410c; --swing: 5.5s"><span class="kandil-string"></span><span class="kandil-glow"></span><span class="kandil-body"></span><span class="kandil-tassel"></span></span>
-                    <span class="kandil" style="--x: 82%; --len: 54px; --c1: #ec4899; --c2: #9d174d; --swing: 5s"><span class="kandil-string"></span><span class="kandil-glow"></span><span class="kandil-body"></span><span class="kandil-tassel"></span></span>
-                    <span class="kandil kandil-wide" style="--x: 92%; --len: 28px; --c1: #a855f7; --c2: #6d28d9; --swing: 4s"><span class="kandil-string"></span><span class="kandil-glow"></span><span class="kandil-body"></span><span class="kandil-tassel"></span></span>
-                </div>
+                <canvas class="diwali-sky" id="diwaliSky" aria-hidden="true"></canvas>
+                <div class="hero-bunting" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
                 <div class="container mx-auto px-4 relative z-10 py-16 md:py-24">
                     <div class="max-w-5xl mx-auto text-center hero-content-in">
@@ -4402,10 +4127,10 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                             <span class="hero-chip-dot" aria-hidden="true"></span>
                             Jaipur-based manufacturer &bull; Since 2020
                         </span>
-                        <div class="shubh-labh" lang="hi" aria-hidden="true">
-                            <span>शुभ</span><i class="shubh-labh-line"></i><span>लाभ</span>
-                        </div>
                         <p class="diwali-greeting"><span lang="hi">शुभ दीपावली</span> · Happy Diwali</p>
+                        <p class="diwali-tagline">
+                            <span lang="hi">तमसो मा ज्योतिर्गमय</span> &nbsp;·&nbsp; From darkness, lead us to light
+                        </p>
                         <h2 class="font-bold leading-tight mt-6 mb-6">
                             Premium Home <br /><span class="hero-shine-text">Cleaning Solutions</span>
                         </h2>
@@ -4433,14 +4158,13 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                             <li><i class="fas fa-award" aria-hidden="true"></i> MSME &amp; Udyam certified</li>
                             <li><i class="fas fa-truck-fast" aria-hidden="true"></i> Bulk &amp; retail</li>
                         </ul>
-                        <p class="hero-tap-hint" aria-hidden="true">✨ Tap anywhere in the sky to light a firework</p>
+                        <p class="hero-tap-hint" aria-hidden="true">🎆 Tap anywhere in the sky to light up a firework<span class="hint-puja"> · every click showers flowers on Lakshmi ji, Ganesh ji &amp; Saraswati ji (see below)</span></p>
                     </div>
                 </div>
 
                 <a href="#business-details" class="hero-scroll-cue" aria-label="Scroll to business details">
                     <span class="hero-scroll-mouse" aria-hidden="true"><span></span></span>
                 </a>
-                <div class="diya-row" aria-hidden="true"><span class="diya" style="--d: -0.00s"></span><span class="diya" style="--d: -0.17s"></span><span class="diya" style="--d: -0.34s"></span><span class="diya" style="--d: -0.51s"></span><span class="diya" style="--d: -0.68s"></span><span class="diya" style="--d: -0.85s"></span><span class="diya" style="--d: -1.02s"></span><span class="diya" style="--d: -1.19s"></span><span class="diya" style="--d: -1.36s"></span><span class="diya" style="--d: -1.53s"></span></div>
                 <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
                     <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,45 L1440,90 L0,90 Z" fill="currentColor" />
                 </svg>
@@ -4458,12 +4182,141 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 </div>
             </div>
 
-            <div class="diwali-ladi" aria-hidden="true"><span style="--x: 1.8%; --sag: 3.7px; --c: #fbbf24; --d: -0.00s"></span><span style="--x: 5.4%; --sag: 6.3px; --c: #ef4444; --d: -0.37s"></span><span style="--x: 8.9%; --sag: 8.0px; --c: #22c55e; --d: -0.74s"></span><span style="--x: 12.5%; --sag: 9.3px; --c: #3b82f6; --d: -1.11s"></span><span style="--x: 16.1%; --sag: 10.3px; --c: #ec4899; --d: -1.48s"></span><span style="--x: 19.6%; --sag: 11.1px; --c: #f97316; --d: -0.25s"></span><span style="--x: 23.2%; --sag: 11.8px; --c: #fbbf24; --d: -0.62s"></span><span style="--x: 26.8%; --sag: 12.4px; --c: #ef4444; --d: -0.99s"></span><span style="--x: 30.4%; --sag: 12.9px; --c: #22c55e; --d: -1.36s"></span><span style="--x: 33.9%; --sag: 13.3px; --c: #3b82f6; --d: -0.13s"></span><span style="--x: 37.5%; --sag: 13.6px; --c: #ec4899; --d: -0.50s"></span><span style="--x: 41.1%; --sag: 13.8px; --c: #f97316; --d: -0.87s"></span><span style="--x: 44.6%; --sag: 13.9px; --c: #fbbf24; --d: -1.24s"></span><span style="--x: 48.2%; --sag: 14.0px; --c: #ef4444; --d: -0.01s"></span><span style="--x: 51.8%; --sag: 14.0px; --c: #22c55e; --d: -0.38s"></span><span style="--x: 55.4%; --sag: 13.9px; --c: #3b82f6; --d: -0.75s"></span><span style="--x: 58.9%; --sag: 13.8px; --c: #ec4899; --d: -1.12s"></span><span style="--x: 62.5%; --sag: 13.6px; --c: #f97316; --d: -1.49s"></span><span style="--x: 66.1%; --sag: 13.3px; --c: #fbbf24; --d: -0.26s"></span><span style="--x: 69.6%; --sag: 12.9px; --c: #ef4444; --d: -0.63s"></span><span style="--x: 73.2%; --sag: 12.4px; --c: #22c55e; --d: -1.00s"></span><span style="--x: 76.8%; --sag: 11.8px; --c: #3b82f6; --d: -1.37s"></span><span style="--x: 80.4%; --sag: 11.1px; --c: #ec4899; --d: -0.14s"></span><span style="--x: 83.9%; --sag: 10.3px; --c: #f97316; --d: -0.51s"></span><span style="--x: 87.5%; --sag: 9.3px; --c: #fbbf24; --d: -0.88s"></span><span style="--x: 91.1%; --sag: 8.0px; --c: #ef4444; --d: -1.25s"></span><span style="--x: 94.6%; --sag: 6.3px; --c: #22c55e; --d: -0.02s"></span><span style="--x: 98.2%; --sag: 3.7px; --c: #3b82f6; --d: -0.39s"></span></div>
-
             <section id="business-details" class="pt-6 pb-0 relative">
-                <div class="rangoli rangoli-left" aria-hidden="true"></div>
+                <div class="surya-motif surya-left" aria-hidden="true"></div>
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-6 mt-8">
+                        <!-- Diwali puja: Ganesh ji, Lakshmi ji & Saraswati ji with a circling aarti thali.
+                             Every click on the page showers marigold petals on them (see initPujaPetals). -->
+                        <div class="puja-stage">
+                            <div class="puja-art-wrap">
+                                <svg class="puja-art" viewBox="0 0 360 270" role="img" aria-labelledby="pujaArtTitle">
+                                    <title id="pujaArtTitle">Lakshmi ji, Ganesh ji and Saraswati ji with a Diwali aarti</title>
+                                    <defs>
+                                        <radialGradient id="pjHalo"><stop offset="0" stop-color="#fffbeb" /><stop offset="0.45" stop-color="#fde047" stop-opacity="0.85" /><stop offset="1" stop-color="#f59e0b" stop-opacity="0" /></radialGradient>
+                                        <linearGradient id="pjGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fef3c7" /><stop offset="0.45" stop-color="#fbbf24" /><stop offset="1" stop-color="#b45309" /></linearGradient>
+                                        <linearGradient id="pjPetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fce7f3" /><stop offset="1" stop-color="#ec4899" /></linearGradient>
+                                        <radialGradient id="pjFlame" cx="0.5" cy="0.8" r="0.6"><stop offset="0" stop-color="#fff" /><stop offset="0.35" stop-color="#fde047" /><stop offset="0.75" stop-color="#f97316" /><stop offset="1" stop-color="#dc2626" stop-opacity="0" /></radialGradient>
+                                        <radialGradient id="pjGlow"><stop offset="0" stop-color="#fde047" stop-opacity="0.7" /><stop offset="1" stop-color="#f97316" stop-opacity="0" /></radialGradient>
+                                        <g id="pjLotus">
+                                            <ellipse cx="0" cy="-12" rx="8" ry="15" fill="url(#pjPetal)" stroke="#be185d" stroke-width="1" transform="rotate(-72)" />
+                                            <ellipse cx="0" cy="-12" rx="8" ry="15" fill="url(#pjPetal)" stroke="#be185d" stroke-width="1" transform="rotate(72)" />
+                                            <ellipse cx="0" cy="-12" rx="8" ry="15" fill="url(#pjPetal)" stroke="#be185d" stroke-width="1" transform="rotate(-36)" />
+                                            <ellipse cx="0" cy="-12" rx="8" ry="15" fill="url(#pjPetal)" stroke="#be185d" stroke-width="1" transform="rotate(36)" />
+                                            <ellipse cx="0" cy="-12" rx="8" ry="15" fill="url(#pjPetal)" stroke="#be185d" stroke-width="1" />
+                                            <ellipse cx="0" cy="0" rx="34" ry="5" fill="#15803d" />
+                                        </g>
+                                        <clipPath id="pjNicheL"><path d="M24 232 V124 A46 46 0 0 1 116 124 V232 Z" /></clipPath>
+                                        <clipPath id="pjNicheC"><path d="M126 232 V110 A54 54 0 0 1 234 110 V232 Z" /></clipPath>
+                                        <clipPath id="pjNicheS"><path d="M244 232 V124 A46 46 0 0 1 336 124 V232 Z" /></clipPath>
+                                        <linearGradient id="pjTeal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e4f57" /><stop offset="1" stop-color="#1f8a8f" /></linearGradient>
+                                        <radialGradient id="pjNicheGlow" cx="0.5" cy="0.45" r="0.6"><stop offset="0" stop-color="#5eead4" /><stop offset="1" stop-color="#115e59" /></radialGradient>
+                                    </defs>
+
+                                    <!-- Shubh / Labh -->
+                                    <text x="26" y="34" class="pj-shubh" text-anchor="middle">शुभ</text>
+                                    <text x="334" y="34" class="pj-shubh" text-anchor="middle">लाभ</text>
+
+                                    <!-- Temple wall: teal backdrop, gold cornice and pillars, three arched niches -->
+                                    <rect x="10" y="40" width="340" height="198" rx="6" fill="url(#pjTeal)" stroke="#b45309" stroke-width="2" />
+                                    <rect x="10" y="40" width="340" height="10" rx="3" fill="url(#pjGold)" stroke="#b45309" stroke-width="1" />
+                                    <path d="M14 54 H346" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3 3" />
+                                    <g class="pj-pillar">
+                                        <rect x="14" y="62" width="10" height="170" fill="url(#pjGold)" stroke="#b45309" stroke-width="0.8" />
+                                        <rect x="12" y="58" width="14" height="6" rx="1.5" fill="#fbbf24" stroke="#b45309" stroke-width="0.8" />
+                                        <rect x="12" y="226" width="14" height="6" rx="1.5" fill="#fbbf24" stroke="#b45309" stroke-width="0.8" />
+                                        <path d="M19 70 V222" stroke="#92400e" stroke-width="0.8" stroke-dasharray="6 4" />
+                                    </g>
+                                    <g class="pj-pillar">
+                                        <rect x="116" y="62" width="10" height="170" fill="url(#pjGold)" stroke="#b45309" stroke-width="0.8" />
+                                        <rect x="114" y="58" width="14" height="6" rx="1.5" fill="#fbbf24" stroke="#b45309" stroke-width="0.8" />
+                                        <rect x="114" y="226" width="14" height="6" rx="1.5" fill="#fbbf24" stroke="#b45309" stroke-width="0.8" />
+                                        <path d="M121 70 V222" stroke="#92400e" stroke-width="0.8" stroke-dasharray="6 4" />
+                                    </g>
+                                    <g class="pj-pillar">
+                                        <rect x="234" y="62" width="10" height="170" fill="url(#pjGold)" stroke="#b45309" stroke-width="0.8" />
+                                        <rect x="232" y="58" width="14" height="6" rx="1.5" fill="#fbbf24" stroke="#b45309" stroke-width="0.8" />
+                                        <rect x="232" y="226" width="14" height="6" rx="1.5" fill="#fbbf24" stroke="#b45309" stroke-width="0.8" />
+                                        <path d="M239 70 V222" stroke="#92400e" stroke-width="0.8" stroke-dasharray="6 4" />
+                                    </g>
+                                    <g class="pj-pillar">
+                                        <rect x="336" y="62" width="10" height="170" fill="url(#pjGold)" stroke="#b45309" stroke-width="0.8" />
+                                        <rect x="334" y="58" width="14" height="6" rx="1.5" fill="#fbbf24" stroke="#b45309" stroke-width="0.8" />
+                                        <rect x="334" y="226" width="14" height="6" rx="1.5" fill="#fbbf24" stroke="#b45309" stroke-width="0.8" />
+                                        <path d="M341 70 V222" stroke="#92400e" stroke-width="0.8" stroke-dasharray="6 4" />
+                                    </g>
+
+                                    <!-- Lakshmi ji (Raja Ravi Varma, public domain) -->
+                                    <g class="pj-deity pj-lakshmi">
+                                        <path d="M24 232 V124 A46 46 0 0 1 116 124 V232 Z" fill="url(#pjNicheGlow)" />
+                                        <g clip-path="url(#pjNicheL)">
+                                            <image href="Lakshmi Ji.webp" x="-7.6" y="70.0" width="152.0" height="215.2"><title>Lakshmi ji</title></image>
+                                        </g>
+                                        <path d="M24 232 V124 A46 46 0 0 1 116 124 V232 Z" fill="none" stroke="url(#pjGold)" stroke-width="4" />
+                                        <path d="M27 232 V124 A43 43 0 0 1 113 124 V232 Z" fill="none" stroke="#fef3c7" stroke-width="0.8" stroke-dasharray="2 2" />
+                                        <circle cx="70" cy="74" r="3.5" fill="#dc2626" stroke="#fbbf24" stroke-width="1.2" />
+                                    </g>
+
+                                    <!-- Ganesh ji (Raja Ravi Varma, public domain) -->
+                                    <g class="pj-deity pj-ganesh">
+                                        <path d="M126 232 V110 A54 54 0 0 1 234 110 V232 Z" fill="url(#pjNicheGlow)" />
+                                        <g clip-path="url(#pjNicheC)">
+                                            <image href="Ganesh Ji.webp" x="97.7" y="25.1" width="164.6" height="228.3"><title>Ganesh ji</title></image>
+                                        </g>
+                                        <path d="M126 232 V110 A54 54 0 0 1 234 110 V232 Z" fill="none" stroke="url(#pjGold)" stroke-width="4" />
+                                        <path d="M129 232 V110 A51 51 0 0 1 231 110 V232 Z" fill="none" stroke="#fef3c7" stroke-width="0.8" stroke-dasharray="2 2" />
+                                        <circle cx="180" cy="52" r="3.5" fill="#dc2626" stroke="#fbbf24" stroke-width="1.2" />
+                                    </g>
+
+                                    <!-- Saraswati ji (Raja Ravi Varma, public domain) -->
+                                    <g class="pj-deity pj-saraswati">
+                                        <path d="M244 232 V124 A46 46 0 0 1 336 124 V232 Z" fill="url(#pjNicheGlow)" />
+                                        <g clip-path="url(#pjNicheS)">
+                                            <image href="Saraswati Ji.webp" x="218.0" y="47.9" width="160.5" height="220.7"><title>Saraswati ji</title></image>
+                                        </g>
+                                        <path d="M244 232 V124 A46 46 0 0 1 336 124 V232 Z" fill="none" stroke="url(#pjGold)" stroke-width="4" />
+                                        <path d="M247 232 V124 A43 43 0 0 1 333 124 V232 Z" fill="none" stroke="#fef3c7" stroke-width="0.8" stroke-dasharray="2 2" />
+                                        <circle cx="290" cy="74" r="3.5" fill="#dc2626" stroke="#fbbf24" stroke-width="1.2" />
+                                    </g>
+
+                                    <!-- Chowki (platform) with red cloth -->
+                                    <rect x="8" y="238" width="344" height="24" rx="4" fill="#991b1b" />
+                                    <path d="M8 242 H352" stroke="#fbbf24" stroke-width="3" />
+                                    <path d="M8 256 H352" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4 4" />
+
+                                    <!-- Lotus seats -->
+                                    <use href="#pjLotus" transform="translate(70 238)" />
+                                    <use href="#pjLotus" transform="translate(180 238) scale(1.3 1.15)" />
+                                    <use href="#pjLotus" transform="translate(290 238)" />
+
+                                    <!-- Aarti: the thali circles clockwise in front of the deities and stays upright -->
+                                    <circle cx="180" cy="170" r="34" fill="none" stroke="#fde047" stroke-width="1" stroke-dasharray="1 5" opacity="0.6" />
+                                    <g class="pj-aarti">
+                                        <g class="pj-aarti-plate">
+                                            <circle cx="180" cy="194" r="16" fill="url(#pjGlow)" />
+                                            <path d="M180 208 V220" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+                                            <circle cx="180" cy="222" r="3" fill="#fbbf24" />
+                                            <ellipse cx="180" cy="205" rx="18" ry="4.5" fill="url(#pjGold)" stroke="#b45309" stroke-width="1" />
+                                            <circle cx="167" cy="203.5" r="1.8" fill="#dc2626" />
+                                            <circle cx="193" cy="203.5" r="1.8" fill="#facc15" />
+                                            <circle cx="171" cy="202" r="1.6" fill="#f97316" />
+                                            <circle cx="189" cy="202" r="1.6" fill="#f97316" />
+                                            <path d="M172 200 Q180 208 188 200 Z" fill="#d97706" stroke="#92400e" stroke-width="0.8" />
+                                            <ellipse class="pj-flame" cx="180" cy="193" rx="3.6" ry="7.5" fill="url(#pjFlame)" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="diya-row puja-diyas" aria-hidden="true">
+                                <span class="diya"></span><span class="diya" style="--d: -0.3s"></span
+                                ><span class="diya" style="--d: -0.6s"></span><span class="diya" style="--d: -0.15s"></span
+                                ><span class="diya" style="--d: -0.45s"></span>
+                            </div>
+                            <div class="puja-blessing" id="pujaBlessing" aria-hidden="true">
+                                <span lang="hi">शुभ दीपावली!</span>
+                                <small>Maa Lakshmi's blessings to you &amp; your family 🪔</small>
+                            </div>
+                        </div>
                         <span class="section-eyebrow">Who we are</span>
                         <h2 class="text-4xl font-bold gradient-text mb-4">Business Details</h2>
                         <div class="section-divider max-w-xs mx-auto"></div>
@@ -4587,12 +4440,13 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             <section class="diwali-days" id="diwali-days" aria-labelledby="diwaliDaysTitle">
                 <div class="container mx-auto px-4">
                     <div class="text-center">
-                        <span class="section-eyebrow">Festival of lights</span>
+                        <span class="section-eyebrow">Dhanteras to Bhai Dooj</span>
                         <h2 class="diwali-days-title" id="diwaliDaysTitle">
-                            <span lang="hi">पाँच दिन रोशनी के</span><span class="diwali-days-sep"> · </span>Five Days of Diwali
+                            <span lang="hi">पाँच दिन, अनगिनत दीये</span><span class="diwali-days-sep"> · </span>Five Days of Diwali
                         </h2>
                         <p class="diwali-days-sub">
-                            Diwali begins with cleaning the home. Give your vehicle the same festive shine.
+                            New vehicles come home on Dhanteras, and every car is washed and decorated before Lakshmi
+                            Puja. Give yours a festive shine.
                         </p>
                     </div>
                     <ol class="diwali-days-list">
@@ -4600,38 +4454,37 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                             <span class="diwali-day-icon" aria-hidden="true">🪙</span>
                             <span class="diwali-day-num">Day 1</span>
                             <h3>Dhanteras</h3>
-                            <p>An auspicious day to bring home something new: gold, utensils or a new vehicle.</p>
+                            <p>An auspicious day to buy gold, new utensils and new vehicles.</p>
                         </li>
                         <li class="diwali-day">
                             <span class="diwali-day-icon" aria-hidden="true">🧹</span>
                             <span class="diwali-day-num">Day 2</span>
-                            <h3>Choti Diwali</h3>
-                            <p>Homes are cleaned top to bottom and the first diyas are lit at the doorstep.</p>
+                            <h3>Chhoti Diwali</h3>
+                            <p>Homes are cleaned and decorated, and the first diyas are lit at the door.</p>
                         </li>
                         <li class="diwali-day is-main">
                             <span class="diwali-day-icon" aria-hidden="true">🪔</span>
                             <span class="diwali-day-num">Day 3</span>
                             <h3>Lakshmi Puja</h3>
-                            <p>Diyas, rangoli and fireworks as families welcome Goddess Lakshmi for prosperity.</p>
+                            <p>Aarti to Lakshmi ji, Ganesh ji &amp; Saraswati ji for prosperity, wisdom and knowledge.</p>
                         </li>
                         <li class="diwali-day">
-                            <span class="diwali-day-icon" aria-hidden="true">🌾</span>
+                            <span class="diwali-day-icon" aria-hidden="true">⛰️</span>
                             <span class="diwali-day-num">Day 4</span>
                             <h3>Govardhan Puja</h3>
-                            <p>Annakut: a mountain of food is offered in gratitude for the harvest.</p>
+                            <p>Annakut offerings honour Shri Krishna lifting the Govardhan hill.</p>
                         </li>
                         <li class="diwali-day">
                             <span class="diwali-day-icon" aria-hidden="true">🎁</span>
                             <span class="diwali-day-num">Day 5</span>
                             <h3>Bhai Dooj</h3>
-                            <p>Sisters pray for their brothers' long life, and brothers return the love with gifts.</p>
+                            <p>Sisters pray for their brothers' long life and happiness.</p>
                         </li>
                     </ol>
                 </div>
             </section>
 
             <section id="products" class="pt-2 pb-8 relative">
-                <div class="rangoli rangoli-products" aria-hidden="true"></div>
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-8">
                         <span class="section-eyebrow">Shop the range</span>
@@ -4641,7 +4494,6 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                             results.
                         </p>
                         <div class="section-divider max-w-xs mx-auto"></div>
-                        <div class="lakshmi-charan" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
                     </div>
                     <div class="max-w-xl mx-auto mb-8">
                         <div class="relative">
@@ -4669,7 +4521,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             </section>
 
             <section id="faq" class="py-8 relative">
-                <div class="rangoli rangoli-right" aria-hidden="true"></div>
+                <div class="surya-motif surya-right" aria-hidden="true"></div>
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-8">
                         <span class="section-eyebrow">Good to know</span>
@@ -4784,8 +4636,6 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             </section>
 
             <section id="contact" class="py-8 relative">
-                <div class="diwali-ladi" aria-hidden="true"><span style="--x: 1.8%; --sag: 3.7px; --c: #fbbf24; --d: -0.00s"></span><span style="--x: 5.4%; --sag: 6.3px; --c: #ef4444; --d: -0.37s"></span><span style="--x: 8.9%; --sag: 8.0px; --c: #22c55e; --d: -0.74s"></span><span style="--x: 12.5%; --sag: 9.3px; --c: #3b82f6; --d: -1.11s"></span><span style="--x: 16.1%; --sag: 10.3px; --c: #ec4899; --d: -1.48s"></span><span style="--x: 19.6%; --sag: 11.1px; --c: #f97316; --d: -0.25s"></span><span style="--x: 23.2%; --sag: 11.8px; --c: #fbbf24; --d: -0.62s"></span><span style="--x: 26.8%; --sag: 12.4px; --c: #ef4444; --d: -0.99s"></span><span style="--x: 30.4%; --sag: 12.9px; --c: #22c55e; --d: -1.36s"></span><span style="--x: 33.9%; --sag: 13.3px; --c: #3b82f6; --d: -0.13s"></span><span style="--x: 37.5%; --sag: 13.6px; --c: #ec4899; --d: -0.50s"></span><span style="--x: 41.1%; --sag: 13.8px; --c: #f97316; --d: -0.87s"></span><span style="--x: 44.6%; --sag: 13.9px; --c: #fbbf24; --d: -1.24s"></span><span style="--x: 48.2%; --sag: 14.0px; --c: #ef4444; --d: -0.01s"></span><span style="--x: 51.8%; --sag: 14.0px; --c: #22c55e; --d: -0.38s"></span><span style="--x: 55.4%; --sag: 13.9px; --c: #3b82f6; --d: -0.75s"></span><span style="--x: 58.9%; --sag: 13.8px; --c: #ec4899; --d: -1.12s"></span><span style="--x: 62.5%; --sag: 13.6px; --c: #f97316; --d: -1.49s"></span><span style="--x: 66.1%; --sag: 13.3px; --c: #fbbf24; --d: -0.26s"></span><span style="--x: 69.6%; --sag: 12.9px; --c: #ef4444; --d: -0.63s"></span><span style="--x: 73.2%; --sag: 12.4px; --c: #22c55e; --d: -1.00s"></span><span style="--x: 76.8%; --sag: 11.8px; --c: #3b82f6; --d: -1.37s"></span><span style="--x: 80.4%; --sag: 11.1px; --c: #ec4899; --d: -0.14s"></span><span style="--x: 83.9%; --sag: 10.3px; --c: #f97316; --d: -0.51s"></span><span style="--x: 87.5%; --sag: 9.3px; --c: #fbbf24; --d: -0.88s"></span><span style="--x: 91.1%; --sag: 8.0px; --c: #ef4444; --d: -1.25s"></span><span style="--x: 94.6%; --sag: 6.3px; --c: #22c55e; --d: -0.02s"></span><span style="--x: 98.2%; --sag: 3.7px; --c: #3b82f6; --d: -0.39s"></span></div>
-                <div class="rangoli rangoli-contact" aria-hidden="true"></div>
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-8">
                         <span class="section-eyebrow">Let's talk</span>
@@ -4840,12 +4690,24 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
             </section>
         </main>
 
+        <!-- Slides in from the right on the first click anywhere on the page (see initPujaPetals) -->
+        <!-- <nav class="quick-links" id="quickLinks" aria-label="Quick links">
+            <button type="button" class="quick-links-close" aria-label="Hide quick links">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <a href="#products" class="quick-link"
+                ><i class="fas fa-boxes" aria-hidden="true"></i><span>All Products</span></a
+            >
+            <a href="#contact" class="quick-link quick-link-contact"
+                ><i class="fas fa-phone-alt fa-flip-horizontal" aria-hidden="true"></i><span>Contact Us</span></a
+            >
+        </nav> -->
+
         <button id="scrollToTop" class="fixed bottom-6 right-6 text-white hidden z-50" aria-label="Scroll to top">
             <i class="fas fa-arrow-up text-lg" aria-hidden="true"></i>
         </button>
 
         <footer class="site-footer text-white py-12">
-            <div class="rangoli rangoli-footer" aria-hidden="true"></div>
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="mb-8 md:mb-0 text-center md:text-left">
@@ -4874,8 +4736,15 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                         ></a>
                     </div>
                 </div>
-                <div class="footer-diyas" aria-hidden="true"><span class="diya" style="--d: -0.0s"></span><span class="diya" style="--d: -0.3s"></span><span class="diya" style="--d: -0.6s"></span><span class="diya" style="--d: -0.9s"></span><span class="diya" style="--d: -1.2s"></span></div>
-                <p class="diwali-footer-wish">May this Diwali bring light, joy &amp; prosperity to you and your family 🪔</p>
+                <div class="footer-bunting" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                <p class="diwali-footer-wish">
+                    May this Diwali fill your home with light, prosperity &amp; happiness 🪔
+                </p>
+                <div class="diya-row" aria-hidden="true">
+                    <span class="diya"></span><span class="diya" style="--d: -0.3s"></span
+                    ><span class="diya" style="--d: -0.6s"></span><span class="diya" style="--d: -0.15s"></span
+                    ><span class="diya" style="--d: -0.45s"></span>
+                </div>
                 <div class="border-t border-slate-700 mt-8 pt-8 text-center">
                     <p class="text-slate-300">
                         © <span id="copyrightYear">2026</span> Swapnil Chemicals. All rights reserved.
@@ -5109,7 +4978,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
 
             const APP = Object.freeze({
                 WA_NUMBER: "919352470085",
-                CART_STORAGE_KEY: "sc_cart_auto",
+                CART_STORAGE_KEY: "sc_cart_home",
                 // This device's last-used WhatsApp number & workshop, so the next enquiry fills itself in.
                 CUSTOMER_STORAGE_KEY: "sc_customer",
                 CURRENCY: "INR",
@@ -5605,7 +5474,7 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                 }
                 refreshAddedCartModalTotals();
                 openDialog(modal, ".added-cart-box");
-                diwaliSparkBurst(document.getElementById("addedCartProductImg"));
+                festiveSparkBurst(document.getElementById("addedCartProductImg"));
             }
 
             function closeAddedCartModal() {
@@ -5973,25 +5842,10 @@ if (($_GET['action'] ?? '') === 'send-cart-pdf') {
                             ["Dated", invoiceDate],
                         ],
                         [
-                            ["Delivery Note", ""],
-                            ["Mode/Terms of Payment", ""],
-                        ],
-                        [
-                            ["Reference No. & Date", ""],
-                            ["Other References", "Online Cart Enquiry"],
-                        ],
-                        [
-                            ["Buyer's Order No.", ""],
-                            ["Dated", ""],
-                        ],
-                        [
                             ["Preferred Delivery Date", customer.date ? formatDisplayDate(customer.date) : ""],
                             ["Time Slot", customer.slot],
                         ],
-                        [
-                            ["Dispatched through", ""],
-                            ["Destination", ""],
-                        ],
+                        [["Other References", "Online Cart Enquiry"]],
                     ];
                     const cellH = 9;
                     const gridH = gridRows.length * cellH;
@@ -7527,15 +7381,79 @@ doc.text("Company's Bank Details", bx, lowTop + 3.8);
                 initScrollAnimations();
             }
 
+            // ---------- Diwali puja: every click showers marigold petals on Lakshmi ji, Ganesh ji & Saraswati ji ----------
+            // Every 7th click shows a Diwali blessing. The first click also slides in the All Products /
+            // Contact Us links on the right (when that markup is present).
+            const PETAL_COLORS = ["#f59e0b", "#fbbf24", "#f97316", "#ea580c", "#dc2626", "#fde047", "#f472b6"];
+            const MAX_PETALS = 90;
+
+            function initPujaPetals() {
+                const hero = document.getElementById("hero");
+                const wrap = document.querySelector(".puja-art-wrap");
+                const blessing = document.getElementById("pujaBlessing");
+                const quickLinks = document.getElementById("quickLinks");
+                let clicks = 0;
+                let blessingTimer = 0;
+                let linksDismissed = false;
+
+                if (wrap && hero) hero.classList.add("puja-on");
+
+                const shower = () => {
+                    if (!wrap || prefersReducedMotion()) return;
+                    if (wrap.querySelectorAll(".pj-petal").length > MAX_PETALS) return;
+                    for (let i = 0; i < 14; i++) {
+                        const petal = document.createElement("span");
+                        petal.className = "pj-petal";
+                        petal.style.left = `${5 + Math.random() * 90}%`;
+                        petal.style.setProperty("--c", PETAL_COLORS[i % PETAL_COLORS.length]);
+                        petal.style.setProperty("--drift", `${Math.round(Math.random() * 60 - 30)}px`);
+                        petal.style.setProperty("--spin", `${Math.round(Math.random() * 540 - 270)}deg`);
+                        petal.style.animationDuration = `${(1.8 + Math.random() * 1.4).toFixed(2)}s`;
+                        petal.style.animationDelay = `${(Math.random() * 0.35).toFixed(2)}s`;
+                        petal.addEventListener("animationend", () => petal.remove());
+                        wrap.appendChild(petal);
+                    }
+                };
+
+                const bless = () => {
+                    if (!blessing) return;
+                    blessing.classList.add("show");
+                    clearTimeout(blessingTimer);
+                    blessingTimer = setTimeout(() => blessing.classList.remove("show"), 4000);
+                };
+
+                const showQuickLinks = () => {
+                    if (quickLinks && !linksDismissed) quickLinks.classList.add("show");
+                };
+
+                if (quickLinks) {
+                    const close = quickLinks.querySelector(".quick-links-close");
+                    if (close) {
+                        close.addEventListener("click", () => {
+                            linksDismissed = true;
+                            quickLinks.classList.remove("show");
+                        });
+                    }
+                }
+
+                document.addEventListener("click", (e) => {
+                    if (quickLinks && quickLinks.contains(e.target)) return;
+                    showQuickLinks();
+                    shower();
+                    clicks++;
+                    if (clicks % 7 === 0) bless();
+                });
+            }
+
             // ---------- Diwali fireworks ----------
-            // Rockets launch from the bottom of the hero and burst into sparks; two anaar (flower-pot)
-            // fountains fizz at the corners. A tap/click in the hero fires a rocket at that point.
+            // Rockets rise from the bottom of the hero and burst into colourful sparks.
+            // A tap/click in the hero launches a rocket that bursts at that point.
             // Runs only while the hero is on screen and the tab is visible; skipped for reduced motion.
-            const DIWALI_COLORS = ["#fbbf24", "#f97316", "#ef4444", "#ec4899", "#a855f7", "#22d3ee", "#4ade80", "#fde68a", "#ffffff"];
+            const DIWALI_COLORS = ["#fbbf24", "#f97316", "#ef4444", "#fde68a", "#f472b6", "#a78bfa", "#34d399", "#60a5fa", "#ffffff"];
 
             function initDiwaliFireworks() {
                 const hero = document.getElementById("hero");
-                const canvas = document.getElementById("diwaliFireworks");
+                const canvas = document.getElementById("diwaliSky");
                 if (!hero || !canvas || prefersReducedMotion()) return;
                 const ctx = canvas.getContext("2d");
                 if (!ctx) return;
@@ -7568,8 +7486,9 @@ doc.text("Company's Bank Details", bx, lowTop + 3.8);
                     if (sparks.length < MAX_SPARKS) sparks.push(spark);
                 };
 
+                // The rocket peaks exactly at (tx, ty), where it bursts.
                 const launch = (tx, ty) => {
-                    const x = Math.min(w - 20, Math.max(20, tx + rand(-60, 60)));
+                    const x = Math.min(w - 20, Math.max(20, tx + rand(-120, 120)));
                     const y = h;
                     const vy = -Math.sqrt(2 * GRAVITY * Math.max(60, y - ty));
                     const frames = -vy / GRAVITY;
@@ -7599,25 +7518,6 @@ doc.text("Company's Bank Details", bx, lowTop + 3.8);
                     }
                 };
 
-                const fountain = (x) => {
-                    const perFrame = isSmall ? 1 : 3;
-                    for (let i = 0; i < perFrame; i++) {
-                        addSpark({
-                            x: x + rand(-3, 3),
-                            y: h - 52,
-                            vx: rand(-1.1, 1.1),
-                            vy: rand(-5.2, -2.8),
-                            life: 1,
-                            decay: rand(0.02, 0.035),
-                            drag: 0.99,
-                            gravity: 0.09,
-                            size: rand(0.8, 1.6),
-                            color: Math.random() < 0.3 ? "#ffffff" : "#fde047",
-                            twinkle: true,
-                        });
-                    }
-                };
-
                 const frame = (now) => {
                     rafId = requestAnimationFrame(frame);
                     const dt = Math.min((now - (last || now)) / 16.67, 3);
@@ -7626,11 +7526,7 @@ doc.text("Company's Bank Details", bx, lowTop + 3.8);
                     if (now >= nextLaunch) {
                         const salvo = Math.random() < 0.2 ? 3 : 1;
                         for (let i = 0; i < salvo; i++) launch(rand(w * 0.1, w * 0.9), rand(h * 0.1, h * 0.42));
-                        nextLaunch = now + rand(700, 1600);
-                    }
-                    if (w > 640) {
-                        fountain(w * 0.06);
-                        fountain(w * 0.94);
+                        nextLaunch = now + rand(800, 1700);
                     }
 
                     // Fade the previous frame instead of clearing it, which leaves light trails.
@@ -7645,20 +7541,29 @@ doc.text("Company's Bank Details", bx, lowTop + 3.8);
                         r.x += r.vx * dt;
                         r.y += r.vy * dt;
                         r.vy += GRAVITY * dt;
+                        // Bright rocket head with a short sparkling tail.
+                        const len = Math.hypot(r.vx, r.vy) || 1;
+                        ctx.globalAlpha = 1;
+                        ctx.strokeStyle = "#fde68a";
+                        ctx.lineWidth = 2;
+                        ctx.beginPath();
+                        ctx.moveTo(r.x - (r.vx / len) * 10, r.y - (r.vy / len) * 10);
+                        ctx.lineTo(r.x, r.y);
+                        ctx.stroke();
                         addSpark({
                             x: r.x,
                             y: r.y,
                             vx: rand(-0.3, 0.3),
-                            vy: rand(0.2, 0.8),
-                            life: 0.7,
-                            decay: 0.05,
+                            vy: rand(-0.2, 0.4),
+                            life: 0.8,
+                            decay: 0.045,
                             drag: 0.95,
-                            gravity: 0.02,
-                            size: 1.2,
-                            color: "#fde68a",
+                            gravity: -0.01,
+                            size: rand(1, 1.8),
+                            color: pick(["#f97316", "#fbbf24", "#fde68a"]),
                             twinkle: false,
                         });
-                        if (r.vy >= -0.4) {
+                        if (r.vy >= -GRAVITY * dt) {
                             explode(r.x, r.y, r.color);
                             rockets.splice(i, 1);
                         }
@@ -7672,7 +7577,7 @@ doc.text("Company's Bank Details", bx, lowTop + 3.8);
                         s.x += s.vx * dt;
                         s.y += s.vy * dt;
                         s.life -= s.decay * dt;
-                        if (s.life <= 0 || s.y > h) {
+                        if (s.life <= 0 || s.y > h || s.y < -20) {
                             sparks[i] = sparks[sparks.length - 1];
                             sparks.pop();
                             continue;
@@ -7716,85 +7621,30 @@ doc.text("Company's Bank Details", bx, lowTop + 3.8);
                 });
 
                 // Opening volley so the sky lights up straight away.
-                [0, 250, 500].forEach((delay, i) =>
-                    setTimeout(() => launch(w * (0.25 + i * 0.25), h * rand(0.15, 0.3)), delay)
-                );
-                nextLaunch = performance.now() + 1400;
+                [0, 300, 650].forEach((delay, i) => setTimeout(() => launch(w * (0.3 + i * 0.2), h * rand(0.15, 0.3)), delay));
+                nextLaunch = performance.now() + 1500;
                 start();
             }
 
-            // ---------- Diwali countdown in the greeting ribbon ----------
-            // Lakshmi Puja date (local time). Update this each year; the badge hides itself
-            // once the five-day festival is over, so a stale date never shows a wrong count.
-            const DIWALI_DATE = { y: 2026, m: 11, d: 8 };
+            // Countdown pill in the greeting ribbon. Diwali (Lakshmi Puja) 2026 falls on 8 November;
+            // update DIWALI_DATE for the next festival. The pill stays hidden after the day.
+            const DIWALI_DATE = { year: 2026, month: 10, day: 8 }; // month is 0-based
 
             function initDiwaliCountdown() {
                 const el = document.getElementById("diwaliCountdown");
                 if (!el) return;
-                const today = new Date();
-                today.setHours(0, 0, 0, 0);
-                const diwali = new Date(DIWALI_DATE.y, DIWALI_DATE.m - 1, DIWALI_DATE.d);
-                const days = Math.round((diwali - today) / 86400000);
-                let text = "";
-                if (days > 1) text = `🎆 ${days} days to Diwali`;
-                else if (days === 1) text = "🎆 Diwali is tomorrow!";
-                else if (days === 0) text = "🪔 Diwali is today!";
-                else if (days >= -3) text = "✨ Diwali week";
-                if (!text) return;
-                el.textContent = text;
-                el.hidden = false;
+                const now = new Date();
+                const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+                const festival = Date.UTC(DIWALI_DATE.year, DIWALI_DATE.month, DIWALI_DATE.day);
+                const days = Math.round((festival - today) / 86400000);
+                if (days > 1 && days <= 30) el.textContent = `⏳ ${days} days to Diwali`;
+                else if (days === 1) el.textContent = "⏳ Diwali is tomorrow!";
+                else if (days === 0) el.textContent = "🪔 Today is Diwali!";
             }
 
-            // ---------- Phuljhadi (sparkler) trail behind the mouse pointer ----------
-            // Desktop pointers only, throttled and capped so it stays cheap; off for reduced motion.
-            function initPhuljhadiTrail() {
-                if (prefersReducedMotion() || typeof Element.prototype.animate !== "function") return;
-                if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-                const MAX_LIVE = 40;
-                let live = 0;
-                let last = 0;
-                document.addEventListener(
-                    "pointermove",
-                    (e) => {
-                        const now = performance.now();
-                        if (now - last < 28 || live >= MAX_LIVE || document.hidden) return;
-                        last = now;
-                        for (let i = 0; i < 2; i++) {
-                            const spark = document.createElement("span");
-                            spark.className = "phuljhadi-spark";
-                            spark.setAttribute("aria-hidden", "true");
-                            spark.style.left = `${e.clientX}px`;
-                            spark.style.top = `${e.clientY}px`;
-                            spark.style.setProperty("--c", DIWALI_COLORS[(Math.random() * 4) | 0]);
-                            document.body.appendChild(spark);
-                            live++;
-                            const angle = Math.random() * Math.PI * 2;
-                            const dist = 10 + Math.random() * 22;
-                            const anim = spark.animate(
-                                [
-                                    { transform: "translate(0, 0) scale(1)", opacity: 1 },
-                                    {
-                                        transform: `translate(${Math.cos(angle) * dist}px, ${Math.sin(angle) * dist + 18}px) scale(0.3)`,
-                                        opacity: 0,
-                                    },
-                                ],
-                                { duration: 500 + Math.random() * 300, easing: "ease-out", fill: "forwards" }
-                            );
-                            const done = () => {
-                                spark.remove();
-                                live--;
-                            };
-                            anim.onfinish = done;
-                            anim.oncancel = done;
-                        }
-                    },
-                    { passive: true }
-                );
-            }
-
-            // Small festive spark burst, e.g. around the product image when it lands in the cart.
+            // Small festive ember burst, e.g. around the product image when it lands in the cart.
             // Sparks go into the open <dialog> (top layer) when there is one, otherwise <body>.
-            function diwaliSparkBurst(anchor) {
+            function festiveSparkBurst(anchor) {
                 if (!anchor || prefersReducedMotion() || typeof Element.prototype.animate !== "function") return;
                 const rect = anchor.getBoundingClientRect();
                 if (!rect.width) return;
@@ -7804,7 +7654,7 @@ doc.text("Company's Bank Details", bx, lowTop + 3.8);
                 const COUNT = 22;
                 for (let i = 0; i < COUNT; i++) {
                     const spark = document.createElement("span");
-                    spark.className = "diwali-spark";
+                    spark.className = "festive-spark";
                     spark.setAttribute("aria-hidden", "true");
                     spark.style.left = `${cx}px`;
                     spark.style.top = `${cy}px`;
@@ -7944,9 +7794,9 @@ doc.text("Company's Bank Details", bx, lowTop + 3.8);
                 initCardTilt();
                 initMagneticButtons();
                 initRipples();
+                initPujaPetals();
                 initDiwaliFireworks();
                 initDiwaliCountdown();
-                initPhuljhadiTrail();
                 const yearEl = document.getElementById("copyrightYear");
                 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
                 cart = restoreCart(storage.get(APP.CART_STORAGE_KEY, {}));
